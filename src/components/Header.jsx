@@ -1,7 +1,16 @@
+import Image from "next/image";
+
 const Header = () => {
   return (
     <header className="header fixed-top">
-      <h1 className="header__logo">Pp</h1>
+      <Image
+        src="/android-chrome-512x512.png" // Ruta relativa en tu carpeta pública o una URL externa
+        alt="Logo "
+        width={40} // Ancho en píxeles
+        height={40} // Altura en píxeles
+        class="header__logo"
+        priority // Opción para cargar inmediatamente
+      />
       <nav>
         <ul className="flex space-x-4">
           <li>
