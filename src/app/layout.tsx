@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pepe Dev | Portafolio de Desarrollador Web y de software",
+  title: "Pepe Dev | Portafolio de Desarrollador de software",
   description: "Portafolio personal de Pepe Dev, desarrollador web especializado en tecnologías como Next.js, React y Angular.",
   keywords: "desarrollador web, desarrollador de software, Next.js, React, Angular, portafolio, Pepe Dev",
   openGraph: {
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
         alt: "Portafolio de Pepe Dev",
       },
     ],
+  },
+  other: {
+    "google-site-verification": "xwKUZnrZ_niag9k_Y6pmNVizdv8NT2W-8X_RR03BgB4",
   },
 };
 
