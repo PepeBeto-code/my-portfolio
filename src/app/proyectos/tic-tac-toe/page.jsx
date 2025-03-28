@@ -3,6 +3,8 @@ import BackLink from "../../../components/BackLink";
 import CodeBlock from "../../../components/CodeBlock";
 import Link from "next/link";
 import Image from "next/image";
+import ImagesCarousel from "../../../components/ImagesCarousel/ImagesCarousel";
+import images from "../../../variables/TicTacTocVariables";
 
 export default function page() {
   return (
@@ -167,6 +169,13 @@ java Client2
               declare un empate.{" "}
             </li>
           </ul>
+          <p>
+            Consulta la <strong>especificación completa</strong> en el{" "}
+            <a href="#linkRepo" className="!text-blue-400">
+              repositorio
+            </a>
+            .
+          </p>
         </div>
 
         <div className="section__container">
@@ -188,17 +197,19 @@ java Client2
         </div>
 
         {/* <!-- Capturas de Consola --> */}
-        <div className="section__container">
-          <h2 className="section__title">Capturas</h2>
+        <div class="section__container section__container--center">
+          <h2 class="section__title !mb-[4rem]">Capturas</h2>
+          <ImagesCarousel images={images} />
         </div>
 
         {/* <!-- Código y Demo --> */}
         <div class="section__container gallery gallery--horizontal !w-auto">
           <Link
+            id="linkRepo"
             href="https://github.com/PepeBeto-code/redes-p1"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            class="button button__text gallery__item"
+            class="button button__text gallery__item button--principal"
           >
             GitHub
           </Link>

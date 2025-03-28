@@ -1,23 +1,33 @@
+import skills from "@/variables/AkillsVariables";
+
 const Skills = () => {
   return (
     <section
       id="skills"
-      className="section section--secondary section__container section__container--full"
+      className="section section--secondary section__container--full"
     >
-      <h2 className="section__title">Tecnologias y Habilidades</h2>
-      <div className="card card--skills">
-        <h4 className="card__title">Java</h4>
-        <p className="card__text">
-          Experto en programación orientada a objetos y desarrollo de
-          aplicaciones en Java.
-        </p>
-      </div>
-      <div className="card card--skills">
-        <h4 className="card__title">Laravel</h4>
-        <p className="card__text">
-          Desarrollo de aplicaciones backend con Laravel, implementando API
-          RESTful y gestión de bases de datos.
-        </p>
+      <div className="section__container">
+        <h2 className="section__title">Tecnologias y Habilidades</h2>
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className={`card card--skills mb-2 ${
+              (index + 1) % 2 == 0 ? " !flex-row-reverse" : ""
+            }`}
+            style={{
+              justifyContent: (index + 1) % 2 == 0 ? "end" : "",
+            }}
+          >
+            <h4
+              className={`card__title ${
+                (index + 1) % 2 == 0 ? "!mb-[12px] !ml-[25px]" : ""
+              }`}
+            >
+              {skill.skill}
+            </h4>
+            <p className="card__text">{skill.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

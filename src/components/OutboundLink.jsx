@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
-export default function OutboundLink({ href, text }) {
+export default function OutboundLink({ href, text, onClick }) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -14,6 +14,7 @@ export default function OutboundLink({ href, text }) {
       className="button button--outbound button--primary"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
     >
       {/* Texto */}
       <motion.p

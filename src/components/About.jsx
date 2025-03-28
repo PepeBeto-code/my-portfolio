@@ -1,10 +1,9 @@
 import React from "react";
-import TimeLine from "../components/TimeLine/TimeLine";
 
-export default function About() {
+export default function About({ children }) {
   return (
     <>
-      <h1 className="section__title">Sobre mí</h1>
+      {children}
       <p className="section__content text-center">
         Soy pasante de la Licenciatura en Ciencias de la Computación en la UNAM.
         Durante mi formación, he adquirido experiencia en desarrollo web y

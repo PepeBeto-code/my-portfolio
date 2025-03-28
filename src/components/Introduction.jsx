@@ -21,7 +21,7 @@ const Introduction = () => {
           eficientes con Java, PHP, y React. Mi objetivo es mejorar
           continuamente mis habilidades y construir aplicaciones robustas.
         </p>
-        <a href="#projects" className="button button__text">
+        <a href="#projects" className="button button__text button--principal">
           Ver proyectos
         </a>
       </div>

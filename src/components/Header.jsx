@@ -14,17 +14,17 @@ const Header = () => {
       <nav>
         <ul className="flex space-x-4">
           <li>
-            <a href="#about" className="hover:text-blue-400">
+            <a href="#about" className="hover:text-gray-400 text-white">
               Sobre mí
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:text-blue-400">
+            <a href="#projects" className="hover:text-gray-400 text-white">
               Proyectos
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-400">
+            <a href="#contact" className="hover:text-gray-400 text-white">
               Contacto
             </a>
           </li>

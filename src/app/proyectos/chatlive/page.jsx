@@ -4,38 +4,42 @@ import BackLink from "../../../components/BackLink";
 import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
+import ImagesCarousel from "../../../components/ImagesCarousel/ImagesCarousel";
+import images from "../../../variables/ChatLiveVariables";
+import ImageExpanded from "@/components/ImageExpanded";
+
 export default function chatlive() {
   return (
     <>
       <section className="section">
         <BackLink></BackLink>
         {/* <!-- Descripción --> */}
-        <div class="section__container">
-          <h1 className="section__title !mb-[5rem]">Chat en Tiempo Real</h1>
+        <div class="section__container pb-0">
+          <h1 className="section__title !mb-[4rem]">Chat en Tiempo Real</h1>
           <div className="section__container--spaced">
-            <div>
+            <div className="section__content">
               <h2 class="section__subtitle">Descripción</h2>
-              <p class="section__content section__content--sm">
+              <p class=" section__content--sm">
                 Este proyecto es una aplicación de chat en tiempo real diseñada
                 para facilitar la comunicación instantánea entre usuarios.
                 Permite enviar y recibir mensajes al instante, ver el estado de
                 los mensajes (enviado, entregado, visto) y recibir
                 notificaciones en tiempo real.{" "}
               </p>
-              <p class="section__content section__content--sm">
+              <p class=" section__content--sm">
                 El sistema garantiza una experiencia fluida, segura y
                 organizada, permitiendo incluso archivar conversaciones y
                 responder mensajes específicos dentro de un chat.
               </p>
             </div>
-            <Image
-              src="/images/chatlive.png" // Ruta relativa en tu carpeta pública o una URL externa
-              alt="Interfaz de ChatLive"
-              width={500} // Ancho en píxeles
-              height={300} // Altura en píxeles
-              class="section__image max-w-[50%]"
-              priority // Opción para cargar inmediatamente
-            />
+            <div class="section__image max-w-[40%] m-auto">
+              <ImageExpanded
+                image={{
+                  src: "/images/Chat1.png",
+                  alt: "Interfaz de ChatLive",
+                }}
+              />
+            </div>
           </div>
         </div>
 
@@ -116,29 +120,8 @@ export default function chatlive() {
 
         {/* <!-- Galería --> */}
         <div class="section__container section__container--center">
-          <h2 class="section__title">Capturas</h2>
-          <div class="gallery gallery--horizontal">
-            <div class="gallery__item">
-              <Image
-                src="/images/chatlive.png" // Ruta relativa en tu carpeta pública o una URL externa
-                alt="Lista de usuarios en línea"
-                width={500} // Ancho en píxeles
-                height={300} // Altura en píxeles
-                class="gallery__image"
-                priority // Opción para cargar inmediatamente
-              />
-            </div>
-            <div class="gallery__item">
-              <Image
-                src="/images/chatlive.png" // Ruta relativa en tu carpeta pública o una URL externa
-                alt="Chat en acción"
-                width={500} // Ancho en píxeles
-                height={300} // Altura en píxeles
-                class="gallery__image"
-                priority // Opción para cargar inmediatamente
-              />
-            </div>
-          </div>
+          <h2 class="section__title !mb-[4rem]">Capturas</h2>
+          <ImagesCarousel images={images} />
         </div>
 
         {/* <!-- Tecnologías --> */}
@@ -217,14 +200,18 @@ export default function chatlive() {
         {/* <!-- Código y Demo --> */}
         <div class="section__container gallery gallery--horizontal ">
           <a
-            href="https://github.com/tuusuario/chatlive"
-            class="button button__text gallery__item !flex-none"
+            href="https://bitbucket.org/pepebeto/chat-live"
+            class="button button__text gallery__item !flex-none button--principal"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
           >
             GitHub
           </a>
           <a
-            href="https://chatlive-demo.com"
-            class="button button__text gallery__item !flex-none"
+            href="https://chat-live-client.vercel.app/login"
+            class="button button__text gallery__item !flex-none button--principal"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
           >
             Demo
           </a>

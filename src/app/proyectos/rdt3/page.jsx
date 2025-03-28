@@ -164,18 +164,13 @@ export default function page() {
           />
         </div>
 
-        {/* <!-- Capturas de Consola --> */}
-        <div className="section__container">
-          <h2 className="section__title">Capturas</h2>
-        </div>
-
         {/* <!-- Código y Demo --> */}
         <div class="section__container gallery gallery--horizontal !w-auto">
           <Link
             href="https://github.com/PepeBeto-code/protocol-rdt3"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            class="button button__text gallery__item"
+            class="button button__text gallery__item button--principal"
           >
             GitHub
           </Link>
