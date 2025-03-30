@@ -7,6 +7,38 @@ import { FaJava } from "react-icons/fa";
 import ImagesCarousel from "../../../components/ImagesCarousel/ImagesCarousel";
 import images from "../../../variables/ChatLiveVariables";
 import ImageExpanded from "@/components/ImageExpanded";
+import * as motion from "motion/react-client";
+
+export const metadata = {
+  title: "ChatLive - Chat en Tiempo Real",
+  description:
+    "ChatLive es una aplicación de chat en tiempo real con WebSockets, autenticación segura y notificaciones push. Permite mensajería instantánea, gestión de conversaciones y estados de mensaje.",
+  keywords:
+    "chat en tiempo real, WebSockets, mensajería instantánea, autenticación JWT, notificaciones push, ChatLive",
+  openGraph: {
+    title: "ChatLive - Chat en Tiempo Real",
+    description:
+      "Aplicación de chat en tiempo real con sincronización instantánea, autenticación segura y notificaciones push.",
+    url: "https://chat-live-client.vercel.app/",
+    siteName: "ChatLive",
+    images: [
+      {
+        url: "/images/Chat1.png",
+        width: 1200,
+        height: 630,
+        alt: "ChatLive - Interfaz de chat en tiempo real",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ChatLive - Chat en Tiempo Real",
+    description:
+      "Mensajería en tiempo real con WebSockets, JWT y notificaciones push.",
+    images: ["/images/Chat1.png"],
+  },
+};
 
 export default function chatlive() {
   return (
@@ -15,7 +47,14 @@ export default function chatlive() {
         <BackLink></BackLink>
         {/* <!-- Descripción --> */}
         <div class="section__container pb-0">
-          <h1 className="section__title !mb-[4rem]">Chat en Tiempo Real</h1>
+          <motion.h1
+            className="section__title !mb-[4rem]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Chat en Tiempo Real
+          </motion.h1>
           <div className="section__container--spaced">
             <div className="section__content">
               <h2 class="section__subtitle">Descripción</h2>

@@ -5,6 +5,38 @@ import Link from "next/link";
 import Image from "next/image";
 import ImagesCarousel from "../../../components/ImagesCarousel/ImagesCarousel";
 import images from "../../../variables/TicTacTocVariables";
+import * as motion from "motion/react-client";
+
+export const metadata = {
+  title: "Tic-Tac-Toe Multiplayer Game",
+  description:
+    "Implementación de un juego de Tic-Tac-Toe multijugador por terminal usando sockets, con autenticación, persistencia de sesión y protocolo de comunicación personalizado.",
+  keywords:
+    "Tic-Tac-Toe, multijugador, sockets, redes, Java, protocolo de comunicación, autenticación",
+  openGraph: {
+    title: "Tic-Tac-Toe Multiplayer Game",
+    description:
+      "Juego multijugador basado en terminal con comunicación mediante sockets y autenticación con cookies.",
+    url: "https://chat-live-client.vercel.app/tic-tac-toe",
+    siteName: "ChatLive",
+    images: [
+      {
+        url: "/images/df-tic.png",
+        width: 1200,
+        height: 630,
+        alt: "Diagrama de Arquitectura del Juego Tic-Tac-Toe",
+      },
+    ],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tic-Tac-Toe Multiplayer Game",
+    description:
+      "Implementación de un juego multijugador por terminal con sockets y autenticación.",
+    images: ["/images/df-tic.png"],
+  },
+};
 
 export default function page() {
   return (
@@ -13,7 +45,14 @@ export default function page() {
         <BackLink></BackLink>
 
         <div className="section__container">
-          <h1 class="section__title">Tic-Tac-Toe Multiplayer Game</h1>
+          <motion.h1
+            className="section__title !mb-[4rem]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Tic-Tac-Toe Multiplayer Game{" "}
+          </motion.h1>
           <p class="section__content text-center">
             Implementacion de un videojuego multijugador por terminal utilizando
             sockets para la comunicación cliente-servidor, con funcionalidades

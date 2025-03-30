@@ -1,8 +1,39 @@
 import React from "react";
 import BackLink from "../../../components/BackLink";
-import CodeBlock from "../../../components/CodeBlock";
 import Link from "next/link";
 import Image from "next/image";
+import * as motion from "motion/react-client";
+
+export const metadata = {
+  title: "Simulación e Implementación de rdt3.0 sobre UDP",
+  description:
+    "Explora la implementación del protocolo rdt3.0 sobre UDP, con simulación de un entorno no fiable y gestión de retransmisiones.",
+  keywords:
+    "rdt3.0, protocolo de comunicación, UDP, transferencia de datos, Java, sockets, redes",
+  openGraph: {
+    title: "Simulación e Implementación de rdt3.0 sobre UDP",
+    description:
+      "Implementación del protocolo rdt3.0 sobre UDP, incluyendo simulación de un entorno no fiable y técnicas para garantizar la entrega de datos.",
+    url: "https://chat-live-client.vercel.app/rdt3",
+    siteName: "ChatLive",
+    images: [
+      {
+        url: "/images/DF-rdt3.png",
+        width: 1200,
+        height: 630,
+        alt: "Diagrama de Flujo del Protocolo rdt3.0",
+      },
+    ],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Simulación e Implementación de rdt3.0 sobre UDP",
+    description:
+      "Explora la implementación del protocolo rdt3.0 sobre UDP, con simulación de un entorno no fiable y gestión de retransmisiones.",
+    images: ["/images/DF-rdt3.png"],
+  },
+};
 
 export default function page() {
   return (
@@ -11,9 +42,14 @@ export default function page() {
         <BackLink></BackLink>
 
         <div className="section__container">
-          <h1 className="section__title">
+          <motion.h1
+            className="section__title !mb-[4rem]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             Simulación y Implementación de Protocolo rdt3.0 sobre UDP
-          </h1>
+          </motion.h1>
           <h2 className="section__subtitle">Descripción:</h2>
           <p class="section__content">
             Este proyecto consistió en la implementación del protocolo rdt3.0

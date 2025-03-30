@@ -4,6 +4,29 @@ import About from "../../components/About";
 import BackLink from "../../components/BackLink";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
+import * as motion from "motion/react-client";
+
+export const metadata = {
+  title: "Sobre mí | Pepe Dev",
+  description:
+    "Conoce más sobre Pepe Dev, su experiencia, habilidades y proyectos destacados en el desarrollo web.",
+  keywords: "sobre mí, desarrollador web, experiencia, habilidades, Pepe Dev",
+  openGraph: {
+    title: "Sobre mí | Pepe Dev",
+    description:
+      "Conoce más sobre Pepe Dev, su experiencia, habilidades y proyectos destacados en el desarrollo web.",
+    url: "https://pepedigital.netlify.app/about",
+    siteName: "Pepe Dev",
+    images: [
+      {
+        url: "/favicon-32x32.png",
+        width: 1200,
+        height: 630,
+        alt: "Sobre mí - Pepe Dev",
+      },
+    ],
+  },
+};
 
 export default function page() {
   return (
@@ -11,7 +34,14 @@ export default function page() {
       <BackLink></BackLink>
       <section className="section__container">
         <About>
-          <h1 className="section__title">Sobre mí</h1>
+          <motion.h1
+            className="section__title !mb-[4rem]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Sobre mí
+          </motion.h1>
         </About>
         <div className="mt-[4rem] mb-[4rem]">
           <h2 className="section__title">Experiencia</h2>

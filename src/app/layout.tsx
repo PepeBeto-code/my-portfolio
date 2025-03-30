@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pepe Dev | Portafolio de Desarrollador Web",
     description: "Portafolio personal de Pepe Dev, desarrollador web especializado en tecnologías como Next.js, React y Angular.",
-    url: "https://pepedigital.netlify.app/",  // Cambia esto por tu dominio real
+    url: "https://pepedigital.netlify.app/",  
     siteName: "Pepe Dev",
     images: [
       {
-        url: "/og-image.jpg",  // Cambia esto por una imagen representativa para compartir en redes
+        url: "/favicon-32x32.png", 
         width: 1200,
         height: 630,
         alt: "Portafolio de Pepe Dev",
