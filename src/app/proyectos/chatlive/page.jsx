@@ -239,7 +239,7 @@ export default function chatlive() {
         {/* <!-- Código y Demo --> */}
         <div class="section__container gallery gallery--horizontal ">
           <a
-            href="https://bitbucket.org/pepebeto/chat-live"
+            href="https://github.com/PepeBeto-code/chat-live.git"
             class="button button__text gallery__item !flex-none button--principal"
             target="_blank"
             rel="noopener noreferrer nofollow"
