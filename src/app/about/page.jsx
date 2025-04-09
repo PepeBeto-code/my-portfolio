@@ -35,7 +35,7 @@ export default function page() {
       <section className="section__container">
         <About>
           <motion.h1
-            className="section__title !mb-[4rem]"
+            className="section__title !my-[2rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}

@@ -48,7 +48,7 @@ export default function chatlive() {
         {/* <!-- Descripción --> */}
         <div class="section__container pb-0">
           <motion.h1
-            className="section__title !mb-[4rem]"
+            className="section__title !my-[2rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
@@ -71,7 +71,7 @@ export default function chatlive() {
                 responder mensajes específicos dentro de un chat.
               </p>
             </div>
-            <div class="section__image max-w-[40%] m-auto">
+            <div class="section__image md:max-w-[40%] sm:w-full m-auto">
               <ImageExpanded
                 image={{
                   src: "/images/Chat1.png",

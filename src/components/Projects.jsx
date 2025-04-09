@@ -23,7 +23,9 @@ const Projects = () => {
             real, notificaciones push y seguridad avanzada para conversaciones
             rápidas y organizadas.
           </p>
-          <AnimatedLink href={`/proyectos/chatlive`} text={"Ver mas"} />
+          <div className="m-auto">
+            <AnimatedLink href={`/proyectos/chatlive`} text={"Ver mas"} />
+          </div>
         </div>
 
         <div
@@ -45,7 +47,9 @@ const Projects = () => {
             Desarrollé un juego multijugador en Java utilizando sockets para la
             comunicación entre clientes y servidores.
           </p>
-          <AnimatedLink href={`/proyectos/tic-tac-toe`} text={"Ver mas"} />
+          <div className="m-auto">
+            <AnimatedLink href={`/proyectos/tic-tac-toe`} text={"Ver mas"} />
+          </div>
         </div>
 
         <div
@@ -69,7 +73,9 @@ const Projects = () => {
             rdt3.0 en entornos no confiables, simulando errores y adaptándolo a
             UDP para garantizar entrega, orden e integridad de los datos.
           </p>
-          <AnimatedLink href={`/proyectos/rdt3`} text={"Ver mas"} />
+          <div className="m-auto">
+            <AnimatedLink href={`/proyectos/rdt3`} text={"Ver mas"} />
+          </div>
         </div>
       </section>
     </>
