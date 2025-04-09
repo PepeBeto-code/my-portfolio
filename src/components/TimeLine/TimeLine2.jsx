@@ -2,6 +2,7 @@ import React from "react";
 import "./Timeline.scss";
 import LinkWithModal from "../LinkWithModal";
 import experiencia from "../../variables/AboutVariables";
+import { Badge } from "reactstrap";
 
 export default function TimeLine2() {
   return (
@@ -32,6 +33,17 @@ export default function TimeLine2() {
                 >
                   {exp.descripcionCorta}
                 </p>
+                <div
+                  class={`mt-2 ${
+                    (index + 1) % 2 != 0 ? "!text-end" : "!items-start"
+                  }`}
+                >
+                  {exp?.skills.map((skill, index) => (
+                    <Badge key={index} className="mx-1 badge">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
                 <LinkWithModal href={`#`} text={"Ver mas"} exp={exp} />
               </div>
             </div>

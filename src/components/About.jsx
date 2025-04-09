@@ -4,26 +4,28 @@ export default function About({ children }) {
   return (
     <>
       {children}
-      <p className="section__content text-center">
-        Soy pasante de la Licenciatura en Ciencias de la Computación en la UNAM.
-        Durante mi formación, he adquirido experiencia en desarrollo web y
-        software, enfocándome en escribir código limpio, estructurado y
-        eficiente.
+      <p className="section__content mb-2">
+        Soy Desarrollador de Software con formación en Ciencias de la
+        Computación en la UNAM, y experiencia en desarrollo web y backend. He
+        trabajado en la creación de aplicaciones escalables utilizando
+        tecnologías como Java, Spring Boot, React, Angular y Laravel.
+        Actualmente, estoy ampliando mis conocimientos en el Instituto de
+        Geografía de la UNAM, donde previamente concluí mi servicio social y
+        ahora desarrollo proyectos que combinan tecnología con investigación.
       </p>
-      <p className="section__content text-center">
-        A lo largo de mi trayectoria he tenido la oportunidad de trabajar como
-        becario y trainee, donde aprendí a desarrollar aplicaciones funcionales
-        y eficientes. También he trabajado en proyectos académicos y personales
-        que han fortalecido mi conocimiento técnico y mi enfoque en el diseño
-        orientado al usuario.
+      <p className="section__content mb-2">
+        Me destaco por ser autodidacta, resolutivo y por adaptarme rápidamente a
+        nuevos desafíos. Mi enfoque está en el diseño eficiente de
+        arquitecturas, la optimización de recursos y la construcción de
+        interfaces de usuario intuitivas. Además, tengo experiencia trabajando
+        con AWS Lambda, API RESTful y bases de datos, y busco continuamente
+        incorporar nuevas tecnologías, como notificaciones push y Web Workers,
+        para mejorar la experiencia del usuario.
       </p>
-      <p className="section__content text-center">
-        Durante mi servicio social en el Instituto de Geografía de la UNAM,
-        colaboré en proyectos que combinan tecnología con investigación, y
-        actualmente estoy desarrollando mi proyecto de titulación en este
-        ámbito. Además, me interesa el aprendizaje continuo y la exploración de
-        nuevas tecnologías como notificaciones push y Web Workers para mejorar
-        la experiencia del usuario.
+      <p className="section__content mb-2">
+        Mi objetivo es integrarme a un equipo de desarrollo donde pueda aportar
+        valor con mis habilidades técnicas y seguir creciendo profesionalmente
+        en proyectos que optimicen procesos mediante la tecnología.
       </p>
     </>
   );

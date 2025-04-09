@@ -103,17 +103,36 @@ export default function page() {
               Adaptabilidad a nuevas tecnologías y metodologías.
             </li>
           </ul>
-          <div className="gallery gallery--horizontal gallery--image">
-            <div class="gallery__item p-4 card">
-              <h3 className="card__title">Lenguajes de Programación</h3>
-              <ul className="list list--bulleted section__content">
-                <li className="list__item">JavaScript / TypeScript</li>
-                <li className="list__item">Java</li>
-                <li className="list__item">PHP</li>
-                <li className="list__item">Python</li>
-              </ul>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-[1.5rem] p-[2rem] pb-0">
+            <div className="grid grid-cols-1 gap-[1.5rem] p-0">
+              <div class="p-4 card">
+                <h3 className="card__title">Lenguajes de Programación</h3>
+                <ul className="list list--bulleted section__content">
+                  <li className="list__item">JavaScript / TypeScript</li>
+                  <li className="list__item">Java</li>
+                  <li className="list__item">PHP</li>
+                </ul>
+              </div>
+              <div class="p-4 card">
+                <h3 className="card__title">Backend</h3>
+
+                <ul className="list list--bulleted section__content">
+                  <li className="list__item">
+                    <span className="section__content--highlighted">
+                      Laravel{" "}
+                    </span>
+                    (MVC, APIs REST, Backpack)
+                  </li>
+                  <li className="list__item">
+                    <span className="section__content--highlighted">
+                      Spring Boot
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="gallery__item p-4 card">
+            <div class="p-4 card">
               <h3 className="card__title">Frontend</h3>
               <ul className="list list--bulleted section__content">
                 <li className="list__item">
@@ -138,23 +157,8 @@ export default function page() {
                 </li>
               </ul>
             </div>
-            <div class="gallery__item p-4 card">
-              <h3 className="card__title">Backend</h3>
-
-              <ul className="list list--bulleted section__content">
-                <li className="list__item">
-                  <span className="section__content--highlighted">
-                    Laravel{" "}
-                  </span>
-                  (MVC, APIs REST, Backpack)
-                </li>
-                <li className="list__item">
-                  <span className="section__content--highlighted">
-                    Spring Boot
-                  </span>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div className="gallery gallery--horizontal gallery--image">
             <div class="gallery__item p-4 card">
               <h3 className="card__title">Bases de Datos</h3>
 
@@ -241,8 +245,10 @@ export default function page() {
           <h3 className="section__subtitle">Proyectos Destacados</h3>
           <ul className="list list--bulleted section__content">
             <li className="list__item flex">
-              <span className="section__content--highlighted">ChatLive:</span>{" "}
-              Un chat en tiempo real con funcionalidades avanzadas.
+              <span className="section__content--highlighted contents">
+                ChatLive:
+              </span>{" "}
+              Un chat en tiempo real con funcionalidades avacontentsnzadas.
               <Link
                 href={"/proyectos/chatlive"}
                 className="flex items-center ml-2 button"
@@ -251,7 +257,7 @@ export default function page() {
               </Link>
             </li>
             <li className="list__item flex">
-              <span className="section__content--highlighted">
+              <span className="section__content--highlighted contents">
                 Juego del Gato:
               </span>{" "}
               Servidor y cliente en Java usando Sockets, con autenticación y

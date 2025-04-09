@@ -162,6 +162,7 @@
   @apply flex items-center justify-center shadow-md transition w-fit;
   border-radius: .95rem;
   color: inherit;
+  margin: auto;
 
   &:hover{
     background-color: $secondary-color;
@@ -224,7 +225,7 @@
 
 .card{
   background-color: $secondary-color;
-  @apply flex items-center p-6 w-full shadow-lg rounded-lg flex-col;
+  @apply flex text-center p-6 w-full shadow-lg rounded-lg flex-col;
 
   &--skills{
     @apply flex-row space-x-4 ;
@@ -238,8 +239,9 @@
 
   &__img {
     @apply mb-4 rounded-md ;
-    width: auto;
-    height: auto
+    width: 250px;
+    height: 150px;
+    margin: auto;
   }
 
   &__title{
@@ -368,6 +370,11 @@
       @apply font-semibold ;
     }
   }
+}
+
+.badge{
+  background-color: $primary-color !important;
+  color: $secondary-color !important;
 }
 
 p {

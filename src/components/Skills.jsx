@@ -25,7 +25,7 @@ const Skills = () => {
             >
               {skill.skill}
             </h4>
-            <p className="card__text">{skill.description}</p>
+            <p class={`card__text !text-start`}>{skill.description}</p>
           </div>
         ))}
       </div>

@@ -1,38 +1,146 @@
-// components/DescripcionInstituto.tsx
+import { Badge } from "reactstrap";
+
+const skillsIns = [
+  "Java 15",
+  "ES6",
+  "Angular 19",
+  "ReactJS 18",
+  "Spring Boot",
+  "Postgres",
+  "MySQL",
+  "Docker",
+  "JavaScript",
+  "Typescript",
+  "Git",
+  "Gitlab",
+  "Github",
+  "Sass",
+  "Html5",
+  "Css3",
+  "Maven",
+  "Spring Security",
+  "Hibernate JPA",
+  "APIs RESTful",
+  "Desarrollo de software",
+  "Apis RESTful",
+  "Desarrollo web"
+];
+
+const skillsUnlocker = [
+  "ReactJS 18",
+  "ES6",
+  "JavaScript",
+  "Amazon Web Services (AWS)",
+  "Serverless Architecture",
+  "AWS Lambda Functions",
+  "Laravel",
+  "Next.js",
+  "Redux",
+  "Php",
+  "Mysql",
+  "Css3",
+  "Html5",
+  "Eloquent",
+  "Git",
+  "Bitbucket",
+  "Api RESTful"
+];
+
+const skillsFabeet = [
+  "JavaScript",
+  "ES5",
+  "Laravel",
+  "Php",
+  "Html5",
+  "Css3",
+  "Web Services RESTful",
+  "Git",
+  "Github",
+  "Laragon",
+  "Backpack for Laravel",
+  "Web services",
+  "Bases de Datos Relacionales",
+  "Desarrollo web"
+];
+
+const skillsTowa = [
+  "Desarrollo de software",
+  "Buenas practicas",
+  "Java",
+  "Principios solid",
+  "Codigo limpio"
+];
+
 const DescripcionInstituto = () => (
     <div>
       <ul className="list list--bulleted section__content">
-        <li className="list__item">Diseñé y desarrollé una aplicación en <strong className="section__content--highlighted">Angular</strong> para gestionar plantillas en <strong className="section__content--highlighted">YAML</strong>, agilizando la edición y almacenamiento de datos.</li>
-        <li className="list__item">Documenté APIs con <strong className="section__content--highlighted">Swagger</strong>, facilitando la integración y comprensión del sistema.</li>
-        <li className="list__item">Optimizé la <strong className="section__content--highlighted">base de datos</strong> del sistema de inventarios, permitiendo la incorporación de nuevas funcionalidades.</li>
-        <li className="list__item">Refactoricé el código <strong className="section__content--highlighted">front-end en Angular</strong>, modularizándolo para una mejor escalabilidad.</li>
-        <li className="list__item">Implementé mejoras en un <strong className="section__content--highlighted">Story Map</strong> de seguridad vial en México con <strong className="section__content--highlighted">Leaflet, CSS y JavaScript</strong>, asegurando responsividad y nuevas funcionalidades.</li>
-        <li className="list__item">Aprendí sobre la creación de <strong className="section__content--highlighted">geoportales</strong> con tecnologías como <strong className="section__content--highlighted">PostGIS, QGIS y GeoServer</strong>.</li>
+        <li className="list__item">Desallo y mantenimiento de aplicaciones utilizando <strong className="section__content--highlighted">Spring Boot, Java, Angular, React</strong> y contenedores <strong className="section__content--highlighted">Docker</strong>, adaptándome a las necesidades específicas de cada proyecto.</li>
+        <li className="list__item">Configuración y despliegue de servicios web con <strong className="section__content--highlighted">Nginx</strong>, así como manejo de bases de datos <strong className="section__content--highlighted">PostgreSQL y MySQL</strong></li>
+        <li className="list__item">Documentación clara y accesible para facilitar la colaboración en proyectos en equipo.</li>
+        <li className="list__item">Implementación de metodologías <strong className="section__content--highlighted">ágiles</strong>, para organizar tareas y optimizar tiempos.</li>
+        <li className="list__item">Participación activa en todas las etapas del ciclo de vida del software: análisis, diseño, desarrollo, pruebas e implementación</li>
+        <li className="list__item">Contribución a soluciones que apoyan procesos estratégicos dentro del Instituto de Geografía.</li>
       </ul>
+      <div>
+        {skillsIns.map((skill, index) => (
+          <Badge key={index} className="mx-1 badge">
+            {skill}
+          </Badge>
+        ))}
+      </div>
     </div>
 );
 
-// components/DescripcionFabeet.tsx
 const DescripcionFabeet = () => (
-    <div>
-      <ul className="list list--bulleted section__content">
-        <li  className="list__item">Desarrollé un sistema de evaluación de satisfacción utilizando <strong className="section__content--highlighted">PHP y Laravel (MVC)</strong>.</li>
-        <li className="list__item">Implementé un <strong className="section__content--highlighted">panel de administración</strong> con Backpack for Laravel, permitiendo la gestión eficiente de evaluaciones.</li>
-        <li className="list__item">Diseñé una interfaz atractiva y funcional, mejorando la experiencia de usuario.</li>
-        <li className="list__item">Realicé pruebas y depuración para garantizar la estabilidad del sistema.</li>
-      </ul>
-    </div>
+<div>
+  <ul className="list list--bulleted section__content">
+    <li className="list__item">
+      Diseñé y desarrollé un <strong className="section__content--highlighted">sistema integral de evaluación de satisfacción del cliente</strong> con encuestas personalizadas según el servicio contratado.
+    </li>
+    <li className="list__item">
+      Implementé <strong className="section__content--highlighted">evaluaciones interactivas</strong> directamente desde correos electrónicos, incluyendo calificaciones por estrellas.
+    </li>
+    <li className="list__item">
+      Amplié una <strong className="section__content--highlighted">API monolítica</strong> agregando controladores, endpoints y lógica de negocio para integrar el nuevo sistema.
+    </li>
+    <li className="list__item">
+      Diseñé los <strong className="section__content--highlighted">DDL y DML</strong> necesarios para definir nuevas entidades en la base de datos.
+    </li>
+    <li className="list__item">
+      Desarrollé un <strong className="section__content--highlighted">panel administrativo con Backpack for Laravel</strong>, incluyendo visualización, edición y análisis de información.
+    </li>
+    <li className="list__item">
+      Integré <strong className="section__content--highlighted">gráficos y estadísticas dinámicas</strong> con librerías especializadas para facilitar el análisis de resultados.
+    </li>
+    <li className="list__item">
+      Diseñé una <strong className="section__content--highlighted">interfaz intuitiva y atractiva</strong>, optimizando la experiencia tanto para usuarios como administradores.
+    </li>
+  </ul>
+  <div>
+    {skillsFabeet.map((skill, index) => (
+      <Badge key={index} className="mx-1 badge">
+        {skill}
+      </Badge>
+    ))}
+  </div>
+</div>
   );
 
-// components/DescripcionChatbot.tsx
 const DescripcionChatbot = () => (
     <div>
       <ul className="list list--bulleted section__content">
-        <li className="list__item">Contribuí en el desarrollo de un <strong className="section__content--highlighted">chatbot con microservicios en AWS</strong>, utilizando <strong className="section__content--highlighted">Amazon Lex y AWS Lambda</strong>.</li>
-        <li className="list__item">Implementé funciones <strong className="section__content--highlighted">Lambda en JavaScript</strong>, mejorando la lógica conversacional del chatbot.</li>
-        <li className="list__item">Colaboré en la arquitectura y pruebas del sistema.</li>
-        <li className="list__item">Aunque el proyecto no se completó, adquirí experiencia en <strong className="section__content--highlighted">desarrollo serverless y microservicios</strong>.</li>
+        <li className="list__item">Desarrollé un <strong className="section__content--highlighted">web service RESTful</strong>, en <strong className="section__content--highlighted">JavaScript</strong>, integrado con <strong className="section__content--highlighted">AWS Lambda</strong> para gestionar peticiones dinámicas de manera eficiente.</li>
+        <li className="list__item">Automatizé procesos mediante la integración de <strong className="section__content--highlighted">chatbots con Amazon Lex</strong>, fortaleciendo la interacción con los usuario</li>
+        <li className="list__item">Construí un <strong className="section__content--highlighted">panel de administración en React</strong> con una estructura <strong className="section__content--highlighted">modular y componentes reutilizables</strong>, facilitando el desarrollo de <strong className="section__content--highlighted">tablas y formularios dinámicos</strong>.</li>
+        <li className="list__item">Optimicé tiempos de respuesta y gestión de entidades de la API conectada al chatbot, asegurando un flujo de trabajo intuitivo para los usuarios administrativos.</li>
       </ul>
+      <div>
+        {skillsUnlocker.map((skill, index) => (
+          <Badge key={index} className="mx-1 badge">
+            {skill}
+          </Badge>
+        ))}
+      </div>
     </div>
   );  
 
@@ -46,17 +154,25 @@ const DescripcionChatbot = () => (
         <li className="list__item">Aprendí a simplificar soluciones, reducir código innecesario y mejorar la calidad del software.</li>
         <li className="list__item">Finalicé el curso con éxito y obtuve un <strong className="section__content--highlighted">reconocimiento de Towa Software</strong>.</li>
       </ul>
+      <div>
+        {skillsTowa.map((skill, index) => (
+          <Badge key={index} className="mx-1 badge">
+            {skill}
+          </Badge>
+        ))}
+      </div>
     </div>
   );
 
 const experiencia = [
     {
       titulo: "Instituto de Geografía - UNAM",
-      actividad: "Desarrolador",
+      actividad: "Desarrollador de Software",
       fechaCorta: "Abril 24",
       fechaCompleta: "Colaborador / Desarrollador de Software | Abril 2024 - Actualidad",
-      descripcionCorta: "Transformé procesos de almacenamiento y visualización con soluciones Angular y geoportales avanzados.",
+      descripcionCorta: "Desarrollo y mantenimiento de aplicaciones fullstack y APIs RESTful, colaborando en todo el ciclo de vida del software con tecnologías como Java, Spring Boot y Angular.",
       descripcionLarga: <DescripcionInstituto />,
+      skills:["Desarrollo de software", "Desarrollo Front", "Desarrollo Back", "Sprint Boot", "Angular"]
     },
     {
         titulo: "Curso de Ingeniería de Software",
@@ -65,14 +181,16 @@ const experiencia = [
         fechaCompleta: "Octubre 2023 - Noviembre 2023",
         descripcionCorta: "Completé un curso intensivo y competitivo en Java, aprendiendo a escribir código limpio y estructurado con Java.",
         descripcionLarga: <DescripcionTowa />,
+        skills:["Desarrollo de software", "Java", "Buenas Practicas"]
       },
     {
-      titulo: "Chatbot en AWS",
+      titulo: "Unlokerfast",
       actividad: "Trainee",
-      fechaCorta: "Sep 22",
-      fechaCompleta: "Trainee / Junior Developer | Septiembre 2022 - Diciembre 2022",
-      descripcionCorta: "Contribuí al diseño de un chatbot basado en microservicios, aplicando funciones Lambda innovadoras.",
+      fechaCorta: "May 22",
+      fechaCompleta: "Trainee / Junior Developer | Mayo 2022 - Agosto 2022",
+      descripcionCorta: "Arquitectura serverless con AWS y React, integrando chatbots con Lex, funciones Lambda y un panel de administración modular.",
       descripcionLarga: <DescripcionChatbot />,
+      skills:["ReactJS", "Amazon Web Services (AWS)", "Laravel", "Serverless"]
     },
     {
         titulo: "Fabeet",
@@ -81,6 +199,7 @@ const experiencia = [
         fechaCompleta: "Becario de Desarrollo | Octubre 2021 - Abril 2022",
         descripcionCorta: "Creé un sistema completo para medición de satisfacción, desde la interfaz hasta informes detallados.",
         descripcionLarga: <DescripcionFabeet />,
+        skills:["Desarrollo web", "Bases de Datos Relacionales", "Web services"]
       },
   ];
   
