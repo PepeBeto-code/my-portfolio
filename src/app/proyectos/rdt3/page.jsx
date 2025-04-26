@@ -38,10 +38,12 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <section className="section">
-        <BackLink></BackLink>
+      <section className="">
+        <div className="container">
+          <BackLink></BackLink>
+        </div>
 
-        <div className="section__container">
+        <div className="section container !max-w-4xl !pt-0">
           <motion.h1
             className="section__title !mb-[4rem]"
             initial={{ opacity: 0 }}
@@ -50,46 +52,50 @@ export default function page() {
           >
             Simulación y Implementación de Protocolo rdt3.0 sobre UDP
           </motion.h1>
-          <h2 className="section__subtitle">Descripción:</h2>
-          <p class="section__content">
-            Este proyecto consistió en la implementación del protocolo rdt3.0
-            (Reliable Data Transfer 3.0), diseñado para garantizar una
-            transferencia fiable de datos en un medio de comunicación no fiable.
-            A través de dos etapas principales, creé un simulador de red que
-            replicaba condiciones adversas como la pérdida y corrupción de
-            paquetes, y luego adapté el protocolo para funcionar sobre UDP, un
-            protocolo sin conexión que no asegura la entrega ni el orden de los
-            paquetes.
-          </p>
-          <h2 className="section__subtitle">Tecnologías utilizadas:</h2>
-          <ul class="section__content list list--bulleted">
-            <li className="list__item">
-              {" "}
-              <span className="section__content--highlighted">Java </span>{" "}
-              (Sockets, I/O, Multithreading)
-            </li>
-            <li className="list__item">
-              {" "}
-              <span className="section__content--highlighted">
-                Protocolos y Comunicación de Red:{" "}
-              </span>
-              Sockets UDP
-            </li>
-            <li className="list__item">
-              <span className="section__content--highlighted">JSON </span>
-              (Para estructurar los mensajes de comunicación)
-            </li>
-            <li className="list__item">
-              <span className="section__content--highlighted">Gson </span>
-              (Librería para manejo de JSON en Java)
-            </li>
-          </ul>
+          <div className="!max-w-4xl flex flex-col !space-y-4">
+            <h2 className="section__subtitle">Descripción:</h2>
+            <p className="section__content">
+              Este proyecto consistió en la implementación del protocolo rdt3.0
+              (Reliable Data Transfer 3.0), diseñado para garantizar una
+              transferencia fiable de datos en un medio de comunicación no
+              fiable. A través de dos etapas principales, creé un simulador de
+              red que replicaba condiciones adversas como la pérdida y
+              corrupción de paquetes, y luego adapté el protocolo para funcionar
+              sobre UDP, un protocolo sin conexión que no asegura la entrega ni
+              el orden de los paquetes.
+            </p>
+            <h2 className="section__subtitle">Tecnologías utilizadas:</h2>
+            <ul className="section__content list list--bulleted">
+              <li className="list__item">
+                {" "}
+                <span className="section__content--highlighted">
+                  Java{" "}
+                </span>{" "}
+                (Sockets, I/O, Multithreading)
+              </li>
+              <li className="list__item">
+                {" "}
+                <span className="section__content--highlighted">
+                  Protocolos y Comunicación de Red:{" "}
+                </span>
+                Sockets UDP
+              </li>
+              <li className="list__item">
+                <span className="section__content--highlighted">JSON </span>
+                (Para estructurar los mensajes de comunicación)
+              </li>
+              <li className="list__item">
+                <span className="section__content--highlighted">Gson </span>
+                (Librería para manejo de JSON en Java)
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* <!-- Características --> */}
-        <div class="section__container section__container--full section__container--secondary section__container--center !mb-8">
-          <div className="section__container !p-0">
-            <h2 className="section__title">Destacados técnicos</h2>
+        <div className="section container !pt-0">
+          <div className="!max-w-4xl">
+            <h2 className="section__subtitle">Destacados técnicos</h2>
             <ul className="section__content list list--bulleted">
               <li className="list__item">
                 <span className="section__content--highlighted">
@@ -125,43 +131,45 @@ export default function page() {
           </div>
         </div>
 
-        <div className="section__container">
-          <h2 className="section__subtitle">Desafíos enfrentados:</h2>
-          <ul className="section__content list list--bulleted">
-            <li className="list__item">
-              Implementar una
-              <span className="section__content--highlighted">
-                {" "}
-                gestión eficiente de retransmisiones
-              </span>{" "}
-              usando temporizadores para manejar la posible pérdida de paquetes
-              en un medio no fiable.
-            </li>
-            <li className="list__item">
-              Asegurar la{" "}
-              <span className="section__content--highlighted">
-                {" "}
-                integridad de los datos{" "}
-              </span>{" "}
-              utilizando un mecanismo de checksum, lo que requería crear un
-              sistema para detectar y manejar la corrupción de paquetes.
-            </li>
-            <li className="list__item">
-              Desarrollar una{" "}
-              <span className="section__content--highlighted">
-                {" "}
-                solución de secuenciación{" "}
-              </span>{" "}
-              de paquetes para garantizar el orden adecuado de los mismos en un
-              protocolo sin conexión como UDP.
-            </li>
-          </ul>
+        <div className="section container  !py-0">
+          <div className=" !max-w-4xl w-full">
+            <h2 className="section__subtitle">Desafíos enfrentados:</h2>
+            <ul className="section__content list list--bulleted">
+              <li className="list__item">
+                Implementar una
+                <span className="section__content--highlighted">
+                  {" "}
+                  gestión eficiente de retransmisiones
+                </span>{" "}
+                usando temporizadores para manejar la posible pérdida de
+                paquetes en un medio no fiable.
+              </li>
+              <li className="list__item">
+                Asegurar la{" "}
+                <span className="section__content--highlighted">
+                  {" "}
+                  integridad de los datos{" "}
+                </span>{" "}
+                utilizando un mecanismo de checksum, lo que requería crear un
+                sistema para detectar y manejar la corrupción de paquetes.
+              </li>
+              <li className="list__item">
+                Desarrollar una{" "}
+                <span className="section__content--highlighted">
+                  {" "}
+                  solución de secuenciación{" "}
+                </span>{" "}
+                de paquetes para garantizar el orden adecuado de los mismos en
+                un protocolo sin conexión como UDP.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div className="section__container section__container--full section--secondary rounded-md !mb-8 !pr-8 !pl-8">
-          <div className="section__container !p-0">
-            <h2 class="section__subtitle">Fases del proyecto</h2>
-            <ul class="section__content list list--numbered">
+        <div className="section container">
+          <div className="!max-w-4xl w-full">
+            <h2 className="section__subtitle">Fases del proyecto</h2>
+            <ul className="section__content list list--numbered">
               <li className="list__item">
                 Simulador de Entorno No Fiable:
                 <p>
@@ -186,7 +194,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="section__container section__container--center">
+        <div className="section container !max-w-4xl w-full !py-0">
           <h2 className="section__title">
             Diagrama de Flujo del Protocolo rdt3.0
           </h2>
@@ -195,26 +203,26 @@ export default function page() {
             alt="ChatLive App"
             width={500} // Ancho en píxeles
             height={300} // Altura en píxeles
-            class="section__image w-[40%]"
+            className="section__image w-[40%]"
             priority // Opción para cargar inmediatamente
           />
         </div>
 
         {/* <!-- Código y Demo --> */}
-        <div class="section__container gallery gallery--horizontal !w-auto">
+        <div className="section !flex-row container justify-center space-x-8">
           <Link
             href="https://github.com/PepeBeto-code/protocol-rdt3"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            class="button button__text gallery__item button--principal"
+            className="button button__text gallery__item button--principal"
           >
             GitHub
           </Link>
         </div>
 
         {/* <!-- Retos y Aprendizajes --> */}
-        <div class="section__container section__container--center section__container--secondary section__container--full">
-          <h2 class="section__title">Resultados y aprendizajes clave</h2>
+        <div className="section  bg-[var(--secondary-color)]">
+          <h2 className="section__title">Resultados y aprendizajes clave</h2>
           <ul className="section__content list list--bulleted">
             <li className="list__item">
               Validación exitosa del comportamiento del protocolo bajo

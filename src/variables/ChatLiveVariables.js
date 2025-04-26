@@ -1,30 +1,30 @@
 const images = [
     {
-      src: "/images/ChatLogin.png",
+      src: "/images/Chat/ChatLogin.png",
       alt: "Lista de usuarios en línea",
     },
     {
-      src: "/images/ChatRegister.png",
+      src: "/images/Chat/ChatRegister.png",
       alt: "Chat en acción",
     },
     {
-      src: "/images/Chat1.png",
+      src: "/images/Chat/Chat1.png",
       alt: "Chat en acción",
     },
     {
-      src: "/images/Chat3.png",
+      src: "/images/Chat/Chat3.png",
       alt: "Lista de usuarios en línea",
     },
     {
-      src: "/images/Chat4.png",
+      src: "/images/Chat/Chat4.png",
       alt: "Chat en acción",
     },
     {
-      src: "/images/Chat5.png",
+      src: "/images/Chat/Chat5.png",
       alt: "Chat en acción",
     },
     {
-      src: "/images/Chat6.png",
+      src: "/images/Chat/Chat6.png",
       alt: "Lista de usuarios en línea",
     },
   ];

@@ -39,11 +39,8 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="section  section__container--full section--secondary"
-    >
-      <div className="section__container section__container--spaced w-full">
+    <section id="contact" className="section bg-[var(--secondary-color)]">
+      <div className="container !max-w-4xl">
         <div className="section__content">
           <motion.h2
             className="section__title"
@@ -53,7 +50,7 @@ const Contact = () => {
           >
             Contacto
           </motion.h2>
-          <p className="">
+          <p className="section__content">
             Puedes contactarme en{" "}
             <a
               href="mailto:jose-alberto@ciencias.unam.mx"
@@ -73,7 +70,7 @@ const Contact = () => {
             , o llenar el formulario.
           </p>
         </div>
-        <div className="w-[30rem] flex items-center section--tertiary justify-center rounded-lg p-6">
+        <div className="flex items-center section--tertiary justify-center rounded-lg p-6">
           <form
             ref={formRef}
             action="https://formspree.io/f/mwplnwwq"
@@ -86,13 +83,10 @@ const Contact = () => {
                 Nombre
               </label>
               <input
-                className=" rounded-sm p-1"
+                className="rounded-sm p-1 bg-[var(--bg-color)]"
                 type="text"
                 id="name"
                 name="name"
-                style={{
-                  backgroundColor: "oklch(.967 .003 264.542)",
-                }}
                 required
               />
             </div>
@@ -102,13 +96,10 @@ const Contact = () => {
                 Correo electrónico
               </label>
               <input
-                className="rounded-sm p-1"
+                className="rounded-sm p-1 bg-[var(--bg-color)]"
                 type="email"
                 id="email"
                 name="email"
-                style={{
-                  backgroundColor: "oklch(.967 .003 264.542)",
-                }}
                 required
               />
             </div>
@@ -118,13 +109,10 @@ const Contact = () => {
                 Mensaje:
               </label>
               <textarea
-                className=" rounded-sm p-1"
+                className=" rounded-sm p-1 bg-[var(--bg-color)]"
                 id="message"
                 name="message"
                 rows={4}
-                style={{
-                  backgroundColor: "oklch(.967 .003 264.542)",
-                }}
                 required
               ></textarea>
             </div>
@@ -132,7 +120,7 @@ const Contact = () => {
             <div className="flex flex items-center justify-center">
               <button
                 disabled={isLoading}
-                className="button button--principal button--primary"
+                className="button button--principal"
                 type="submit"
               >
                 {isLoading ? <Spinner size="sm" color="black" /> : "Enviar"}

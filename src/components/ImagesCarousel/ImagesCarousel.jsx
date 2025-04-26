@@ -72,7 +72,7 @@ const ImagesCarousel = ({ images }) => {
 
   const setTweenNodes = useCallback((emblaApi) => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector(".embla__parallax__layer");
+      return slideNode.querySelector(".embla-img__parallax__layer");
     });
   }, []);
 
@@ -142,31 +142,30 @@ const ImagesCarousel = ({ images }) => {
   }, [expandedImage, modalGallery]);
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <div className="embla-img">
+      <div
+        className="embla-img__viewport relative flex items-center"
+        ref={emblaRef}
+      >
+        <div className="embla-img__container">
           {images.map((img, index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__parallax">
-                <div className="embla__parallax__layer">
+            <div className="embla-img__slide" key={index}>
+              <div className="embla-img__parallax">
+                <div className="embla-img__parallax__layer">
                   <Image
                     src={img.src} // Ruta relativa en tu carpeta pública o una URL externa
                     alt={img.alt}
-                    className="embla__slide__img embla__parallax__img"
+                    className="embla-img__slide__img embla-img__parallax__img"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
                     width={100} // Ancho en píxeles
                     height={100} // Altura en píxeles
-                    onClick={() => setExpandedImage(img)}
                   />
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="embla__controls">
-        <div className="embla__buttons">
+        <div className="embla-img__buttons absolute">
           <PrevButton
             onClick={() => {
               isExpand.current = false;
@@ -184,10 +183,10 @@ const ImagesCarousel = ({ images }) => {
             disabled={nextBtnDisabled}
           />
         </div>
-        <div className="cursor-pointer" onClick={() => setModalGallery(true)}>
-          <Images />
-        </div>
-        <div className="embla__dots">
+      </div>
+
+      <div className="embla-img__controls">
+        <div className="embla-img__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -196,99 +195,13 @@ const ImagesCarousel = ({ images }) => {
                 setIsModalNavigating(false);
                 onDotButtonClick(index);
               }}
-              className={"embla__dot".concat(
-                index === selectedIndex ? " embla__dot--selected" : ""
+              className={"embla-img__dot".concat(
+                index === selectedIndex ? " embla-img__dot--selected" : ""
               )}
             />
           ))}
         </div>
       </div>
-
-      {/* Imagen expandida */}
-      {expandedImage && (
-        <div className="expanded-image-overlay">
-          {currentIndex > 0 && (
-            <PrevButton
-              className="!mr-[0.5rem]  !text-white embla__button embla__button--prev"
-              onClick={handlePrev}
-              disabled={prevBtnDisabled}
-            />
-          )}
-
-          <div className="expanded-image-container">
-            <button
-              className="close-button"
-              onClick={() => setExpandedImage(null)}
-            >
-              <X />
-            </button>
-            <Image
-              src={expandedImage.src}
-              alt={expandedImage.alt}
-              width={800}
-              height={600}
-              className="expanded-image"
-            />
-            <div
-              className="cursor-pointer flex justify-center items-center text-white text-xl mt-4"
-              onClick={() => {
-                setExpandedImage(null);
-                setModalGallery(true);
-              }}
-            >
-              <Images />
-            </div>
-          </div>
-
-          {currentIndex < images.length - 1 && (
-            <NextButton
-              className="!ml-[0.5rem] !text-white embla__button embla__button--next"
-              onClick={handleNext}
-              disabled={nextBtnDisabled}
-            />
-          )}
-        </div>
-      )}
-
-      {/* Gallery expandida */}
-      {modalGallery && (
-        <div className="expanded-image-overlay">
-          <div
-            style={{
-              overflowY: "auto",
-              maxHeight: "100%",
-              width: "100%",
-            }}
-          >
-            <div className="gallery gallery--image relative">
-              <button
-                className="close-button"
-                onClick={() => setModalGallery(null)}
-              >
-                <X />
-              </button>
-              {images.map((img, index) => (
-                <div
-                  key={index}
-                  className="gallery__item cursor-pointer"
-                  onClick={() => {
-                    setModalGallery(false);
-                    setExpandedImage(img);
-                  }}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={800}
-                    height={600}
-                    className="gallery__image"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

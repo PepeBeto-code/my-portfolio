@@ -1,21 +1,29 @@
+"use client";
+
 import React from "react";
 import { MoveLeft } from "lucide-react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function BackLink({
-  href = "/",
-  text = "Regresar",
-  onClick,
-  className,
-}) {
+export default function BackLink({ text = "Regresar", className }) {
+  const router = useRouter();
+
+  function handleClick() {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      // Si hay historial, regresar
+      router.back();
+    } else {
+      // Si no hay historial (ej. acceso directo), ir al home
+      router.push("/");
+    }
+  }
+
   return (
-    <Link
-      href={href}
-      onClick={onClick}
+    <button
+      onClick={handleClick}
       className={`button button--back button--primary ${className}`}
     >
       <MoveLeft />
       <p className="text-base">{text}</p>
-    </Link>
+    </button>
   );
 }

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from '@/components/Nav/Nav'
+import Socials from "@/components/Socials";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -45,10 +48,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+    <Nav></Nav>
         {children}
                           {/* Footer */}
-    <footer className="footer">
+    <footer className="p-6 text-center">
       <p className="footer__content">&copy; {new Date().getFullYear()} Mi portafolio</p>
+      <Socials></Socials>
     </footer>
       </body>
     </html>

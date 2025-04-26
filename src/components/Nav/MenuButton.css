@@ -1,0 +1,108 @@
+@media (max-width: 580px){
+    .menuMovil .menu-toggle {
+      color: #ccf381;
+  }
+  }
+  
+  .menuMovil .menuToggle:before {
+    top: 0;
+  }
+  
+  .menuMovil .menuToggle:after {
+    right: 0;
+    width: 72% !important;
+    top: 1.13em;
+  }
+  
+  .menuMovil .menuToggle:before, .menuMovil .menuToggle:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: var(--bg-color);
+  }
+  
+  .menuMovil .menuToggle {
+    z-index: 999;
+    width: 2.78em;
+    height: 2.09em;
+    background: none;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-flexbox;
+    display: inline-flex;
+    margin-top: 0.699em;
+    color: var(--color-primario);
+  }
+  
+  .ekeZOi .menuToggle:after {
+    right: 0;
+    width: 72%;
+    top: 1.13em;
+  }
+  
+  .ekeZOi .menuToggle.x:after {
+    top: 0;
+    width: 100%;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .ekeZOi .menuToggle.x:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .ekeZOi .menuToggle:before {
+    top: 0;
+  }
+  
+  .ekeZOi .menuToggle:before, .ekeZOi .menuToggle:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: var(--bg-color);
+  }
+  
+  .ekeZOi .menuToggle {
+    z-index: 999;
+    width: 2.78em;
+    height: 2.09em;
+    background: none;
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-flexbox;
+    display: inline-flex;
+    margin-top: 0.699em;
+    color: var(--color-primario);
+  }
+  
+  
+  .ekeZOi #logo, .ekeZOi .menuToggle {
+    color: var(--color-primario) !important;
+  }
+  
+  .menu-hidden {
+    transform: translateX(165%);
+    transition: transform 1s ease-in-out;
+  }
+  
+  .menu-visible {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+  }

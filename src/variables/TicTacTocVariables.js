@@ -1,22 +1,22 @@
 const images = [
     {
-      src: "/images/runserver.png",
+      src: "/images/multijugador/runserver.png",
       alt: "Lista de usuarios en línea",
     },
     {
-      src: "/images/server.png",
+      src: "/images/multijugador/server.png",
       alt: "Chat en acción",
     },
     {
-      src: "/images/client1init.png",
+      src: "/images/multijugador/client1init.png",
       alt: "Chat en acción",
     },
     {
-      src: "/images/client2init.png",
+      src: "/images/multijugador/client2init.png",
       alt: "Lista de usuarios en línea",
     },
     {
-      src: "/images/client1finit.png",
+      src: "/images/multijugador/client1finit.png",
       alt: "Chat en acción",
     }
   ];

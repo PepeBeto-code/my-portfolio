@@ -11,7 +11,7 @@ export default function OutboundLink({ href, text, onClick }) {
   return (
     <Link
       href={href}
-      className="button button--outbound button--primary"
+      className="button m-auto button--outbound button--primary"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={onClick}
@@ -21,6 +21,7 @@ export default function OutboundLink({ href, text, onClick }) {
         initial={{ x: 0, opacity: 1 }}
         animate={{ x: hovered ? -20 : 0, opacity: hovered ? 0 : 1 }}
         transition={{ duration: 0.3 }}
+        className="button--primary"
       >
         {text}
       </motion.p>

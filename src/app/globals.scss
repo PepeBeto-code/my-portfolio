@@ -1,14 +1,93 @@
 @use "tailwindcss";
 
+:root {
+  --text-primary: oklch(.278 .033 256.848);
+  --text-secondary: #4b5563;
+  --bg-color: #FFFFFF;
+  --primary-color: oklch(.278 .033 256.848);
+  --secondary-color: oklch(.967 .003 264.542);
+  --alert-color: #ef4444;
+  --success-color: #10b981;
+  --detail-high-contrast: rgb(234, 234, 234);
+  --text-tertiary: oklch(.446 .03 256.802)
+}
+
+/* Variables para dark Mode */
+.dark-mode {
+  --text-primary: oklch(0.95 0.02 256.848);       /* Texto principal claro */
+  --text-secondary: #d1d5db;                     /* Gris claro */
+  --bg-color: #0b0b0f;                           /* Fondo muy oscuro */
+  --primary-color: oklch(0.85 0.03 256.848);     /* Mismo tono que en light, más claro */
+  --secondary-color: #13141f;   /* Variante del secundario, menos saturado */
+  --alert-color: #f87171;                        /* Rojo suavizado para dark */
+  --success-color: #34d399;                      /* Verde más brillante */
+  --detail-high-contrast: rgb(40, 40, 40);       /* Detalles oscuros pero visibles */
+  --text-tertiary: oklch(0.7 0.03 256.802);      /* Tono medio para texto secundario */
+}
+
+// $text-prmary: var(--text-primary);
+// $text-secondary: var(--text-secondary);
+// $font-family: var(--font-family);
+// $bg-color: var(--bg-color);
+// $primary-color: var(--primary-color);
+// $secondary-color: var(--secondary-color);
+// $alert-color: var(--alert-color);
+// $success-color: var(--success-color);
+
+@layer utilities {
+  .clip-polygon {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0% 80%, 0% 20%);
+  }
+}
+
+
 // Estilos globales
-    $primary-color: oklch(.278 .033 256.848);;
-    $secondary-color: oklch(.967 .003 264.542);
-    $bg-color: #fff;
-    $text-prmary: #fff;
-    $text-secondary: oklch(.278 .033 256.848);
-    $text-tertiary: oklch(.446 .03 256.802);
+    $primary-color: var(--primary-color);
+    $secondary-color: var(--secondary-color);
+    $bg-color: var(--bg-color);
+    $text-prmary: var(--text-primary);
+    $text-secondary: var(--text-secondary);
+    $text-tertiary: var(--text-tertiary);
     $max-width: 64rem;
     $detail-medium-contrast: rgb(234, 234, 234);
+
+    body {
+      background: var(--bg-color) !important;
+      font-family: 'Inter', 'Roboto', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $text-prmary !important;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.5em;
+      color: $text-prmary;
+    }
+    
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem) !important;
+    }
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 1.9rem) ;
+    }
+    h3 {
+      font-size: clamp(1rem, 2vw, 1.5rem) !important;
+    }
+    
+    h1, h2, h3, p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    
+    p, li, span, label {
+      font-family: 'Inter', 'Roboto', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: $text-secondary;
+    }
 
 /* Variables para Dark Mode */
 .dark-mode {
@@ -18,103 +97,7 @@
     $text-color: hsla(220, 15%, 90%, 1) ;
 }
 
-// 🌟 Mixins reutilizables
-
-
 // 📌 Bloques
-.footer{
-  background-color: $primary-color;
-  @apply p-6 text-center;
-  
-  &__content{
-    color: $text-prmary
-  }
-}
-
-.header {
-  @apply p-6 flex justify-between items-center  shadow-lg;
-  background-color: $primary-color;
-  color: $text-prmary;
-  position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-  &__logo {
-    @apply font-bold text-2xl;
-  }
-
-  &__list{
-    @apply space-x-6;
-  }
-}
-
-.gallery {
-  display: flex; /* Controla disposición horizontal o vertical */
-  gap: 1.5rem; /* Define el espaciado entre los elementos */
-  padding: 2rem; /* Espaciado interno */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  flex-wrap: wrap;
-
-  &--vertical {
-    flex-direction: column; /* Muestra elementos en disposición vertical */
-  }
-
-  &--horizontal {
-    flex-direction: row; /* Muestra elementos en disposición horizontal */
-  }
-
-  &__item {
-    flex: 1; /* Los hace flexibles */
-    text-align: center; /* Centra contenido interno */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  }
-
-  &--image{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: min-content;
-    margin: auto;
-
-    & .gallery__item{
-      width: 18rem;
-    }
-
-    & .gallery__image{
-      width: 300px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px #0000001a;
-    }
-
-        /* Media Query para pantallas más pequeñas */
-        @media (max-width: 768px) {
-          grid-template-columns: repeat(2, 1fr); /* Dos elementos por fila */
-        }
-    
-        /* Media Query para pantallas muy pequeñas */
-        @media (max-width: 480px) {
-          grid-template-columns: 1fr; /* Un solo elemento por fila */
-        }
-        
-  }
-
-  &--icon{
-
-    & .gallery__item{
-      display: inline-block;
-      border-radius: 50rem;
-      padding: 10px;
-
-    }
-
-    & .gallery__icon{
-      font-size: 4rem; /* Escala los iconos */
-      width: 4rem;
-    }
-  }
-}
-
 .list {
   margin: 0;
   padding: 0;
@@ -156,8 +139,6 @@
   }
 }
 
-
-
 .button{
   @apply flex items-center justify-center shadow-md transition w-fit;
   border-radius: .95rem;
@@ -169,11 +150,12 @@
 
   &--principal{
     background-color: $primary-color;
-    @apply mt-6 px-6 py-3 ;
+    color: $bg-color !important;
+    @apply mt-6 px-6 py-3 font-bold  ;
 
     &:hover{
       background-color: $bg-color;
-      color: $text-secondary
+      color: $text-secondary !important;
     }
   }
 
@@ -183,10 +165,6 @@
 
   &--back{
     @apply mt-6 px-6 py-3  space-x-2 font-medium shadow-none mt-0;
-    position: fixed;
-    top: 1;
-    left: 20;
-    z-index: 1000;
   }
 
   &--primary{
@@ -195,6 +173,7 @@
 
     &:hover{
       background-color: $secondary-color;
+      color: $primary-color !important;
     }
   }
 
@@ -208,7 +187,7 @@
   }
 
   &__arrow {
-    @apply absolute left-8 flex items-center text-gray-900 ;
+    @apply absolute left-8 flex items-center;
   }
 
   &__text {
@@ -223,28 +202,14 @@
 }
 
 .card{
-  background-color: $secondary-color;
+  --bs-body-bg: $bg-color;
+  --bs-card-bg: $bg-color;
+  background-color: $secondary-color !important;
   @apply flex text-center p-6 w-full shadow-lg rounded-lg flex-col;
 
-  &--skills{
-    @apply flex-row space-x-4 ;
-    background-color: $bg-color;
-    flex-direction: row !important;
-  }
-
-  &--primary{
-    background-color: $bg-color;
-  }
-
-  &__img {
-    @apply mb-4 rounded-md ;
-    width: 250px;
-    height: 150px;
-    margin: auto;
-  }
-
   &__title{
-    @apply text-xl font-semibold;
+    @apply  font-semibold !text-xl;
+    font-weight: 600 !important;
     color: $text-secondary;
   }
 
@@ -255,119 +220,27 @@
 }
 
 .section{
-  scroll-margin-top: 80px; /* Ajusta según la altura de tu navbar */
-  background-color: $bg-color;
-  @apply flex flex-col items-center justify-center ;
-
-  &--introduction{
-    @apply text-center h-screen;
-  }
-
-  &--tertiary{
-    background-color: $primary-color;
-
-    & .section__title{
-      color: $text-prmary;
-    }
-  
-    & .section__subtitle{
-      color: $text-prmary;
-    }
-  
-  
-    & .section__content{
-      color: $text-prmary;
-    }
-
-  }
-
-  &--secondary{
-    background-color: $secondary-color;
-  }
-
-  &--primary{
-    background-color: $bg-color;
-  }
-
-  &__container{
-    max-width: $max-width;
-    padding: 4rem 1.5rem;
-    margin: auto;
-    @apply w-full;
-
-    &--center{
-     @apply flex flex-col items-center justify-center ;
-    }
-
-    &--spaced {
-      @apply flex items-center; /* Mantiene flexibilidad */
-      display: flex;
-      gap: 2rem;
-      align-items: center; /* Asegura que los elementos estén alineados */
-
-              /* Media Query para pantallas más pequeñas */
-              @media (max-width: 768px) {
-                & .section__content{
-                  width: 40% !important;
-                }
-             }
-          
-              /* Media Query para pantallas muy pequeñas */
-              @media (max-width: 480px) {
-                flex-wrap: wrap;
-                gap: 0rem !important;
-
-                & .section__content{
-                  width: 100% !important;
-                }
-            }
-
-      & .section__content{
-        width: 40%;
-      }
-    }
-
-    &--secondary{
-      background-color: $secondary-color
-    }
-
-    &--full{
-      width: 100%;
-      max-width: none;
-    }
-  }
+  scroll-margin-top: 0px; /* Ajusta según la altura de tu navbar */
+  @apply w-full py-[4rem] relative space-y-6 flex flex-col md:justify-center items-center ;
 
   &__title{
     @apply text-4xl font-semibold text-center mb-6;
-    color: $text-secondary;
-  }
-
-  &__subtitle{
-    color: $text-secondary;
-    @apply text-2xl font-semibold  text-left mb-4;
-
-    &--center{
-      @apply text-center ;
-    }
-  }
-
-  &__image{
-    border-radius: 25px;
-    @apply py-3  ;
+    color: $text-prmary;
   }
 
   &__content{
     color: $text-tertiary;
     @apply mb-4 text-lg;
 
-    &--sm{
-      @apply text-sm;
-    }
-
     &--highlighted{
       color: $text-secondary;
       @apply font-semibold ;
     }
+  }
+
+  &__subtitle{
+    color: $text-secondary;
+    @apply text-left   !text-2xl   !font-semibold mb-4;
   }
 }
 

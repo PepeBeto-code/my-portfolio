@@ -41,36 +41,43 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <section className="section">
-        <BackLink></BackLink>
+      <section className="">
+        <div className="container">
+          <BackLink></BackLink>
+        </div>
 
-        <div className="section__container">
+        <div className="section container !pt-0">
           <motion.h1
-            className="section__title !mb-[4rem]"
+            className="section__title"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
             Tic-Tac-Toe Multiplayer Game{" "}
           </motion.h1>
-          <p class="section__content text-center">
-            Implementacion de un videojuego multijugador por terminal utilizando
-            sockets para la comunicación cliente-servidor, con funcionalidades
-            de inicio de sesión, persistencia de sesión mediante cookies y un
-            protocolo de comunicación personalizado. Este proyecto ayudo a
-            consolidar mis habilidades en sistemas distribuidos y destaca por el
-            diseño de un protocolo de comunicación y la experiencia práctica en
-            programación de redes.
-          </p>
+          <ImagesCarousel images={images} />
+
+          <div className="!max-w-4xl">
+            <div className="">
+              <h2 className="section__subtitle">Descripción</h2>
+              <p className=" section__content">
+                Implementacion de un videojuego multijugador por terminal
+                utilizando sockets para la comunicación cliente-servidor, con
+                funcionalidades de inicio de sesión, persistencia de sesión
+                mediante cookies y un protocolo de comunicación personalizado.
+                Este proyecto ayudo a consolidar mis habilidades en sistemas
+                distribuidos y destaca por el diseño de un protocolo de
+                comunicación y la experiencia práctica en programación de redes.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* <!-- Características --> */}
-        <div class="section__container section__container--full section__container--secondary section__container--center !mb-8">
-          <div className="section__container !p-0">
-            <h2 class="section__title section__subtitle--center">
-              Funcionalidades principales
-            </h2>
-            <ul class="section__content list list--bulleted">
+        <div className="section container !py-0">
+          <div className="!max-w-4xl w-full">
+            <h2 className="section__subtitle">Funcionalidades principales</h2>
+            <ul className="section__content list list--bulleted">
               <li className="list__item">
                 {" "}
                 <span className="section__content--highlighted">
@@ -116,13 +123,14 @@ export default function page() {
         </div>
 
         {/* <!-- Protocolo de Comunicación --> */}
-        <div class="section__container section--secondary rounded-md !mb-8">
-          <h2 class="section__subtitle">Protocolo de Comunicación</h2>
-          <p className="section__content">
-            Los clientes envian mensajes al servidor en formato JSON:
-          </p>
-          <CodeBlock
-            code={`
+        <div className="section container">
+          <div className="!max-w-4xl w-full bg-[var(--secondary-color)] p-4">
+            <h2 className="section__subtitle">Protocolo de Comunicación</h2>
+            <p className="section__content">
+              Los clientes envian mensajes al servidor en formato JSON:
+            </p>
+            <CodeBlock
+              code={`
 {
   "action": "move",
   "data": {
@@ -133,13 +141,13 @@ export default function page() {
 }
 
   `}
-            language="json"
-          />
-          <p className="section__content">
-            El servidor responde con el estado actualizado del juego:
-          </p>
-          <CodeBlock
-            code={`
+              language="json"
+            />
+            <p className="section__content">
+              El servidor responde con el estado actualizado del juego:
+            </p>
+            <CodeBlock
+              code={`
 {
   "status": "success",
   "data": {
@@ -153,140 +161,141 @@ export default function page() {
 }
 
   `}
-            language="json"
-          />
+              language="json"
+            />
+          </div>
         </div>
 
-        <div className="section__container section__container--center">
+        <div className="section container !max-w-4xl w-full !py-0">
           <h2 className="section__subtitle">Diagrama de arquitectura</h2>
           <Image
             src="/images/df-tic.png" // Ruta relativa en tu carpeta pública o una URL externa
             alt="ChatLive App"
             width={500} // Ancho en píxeles
             height={300} // Altura en píxeles
-            class="section__image w-[80%]"
+            className="section__image w-[80%]"
             priority // Opción para cargar inmediatamente
           />
         </div>
 
-        <div className="section__container section--secondary rounded-md !mb-8">
-          <h2 class="section__subtitle">Cómo jugar</h2>
-          <ul class="section__content list list--numbered">
-            <li className="list__item">
-              Inicia el servidor: <code>java Server</code>
-              <CodeBlock
-                code={`
+        <div className="section container ">
+          <div className="!max-w-4xl w-full bg-[var(--secondary-color)] p-4">
+            <h2 className="section__subtitle">Cómo jugar</h2>
+            <ul className="section__content list list--numbered">
+              <li className="list__item">
+                Inicia el servidor: <code>java Server</code>
+                <CodeBlock
+                  code={`
 java Server
 
   `}
-                language="bash"
-              />
-            </li>
-            <li className="list__item">
-              Inicia los clientes: <code>java Client</code>
-              <CodeBlock
-                code={`
+                  language="bash"
+                />
+              </li>
+              <li className="list__item">
+                Inicia los clientes: <code>java Client</code>
+                <CodeBlock
+                  code={`
 java Client1  
 java Client2  
 
   `}
-                language="bash"
-              />
-            </li>
-            <li className="list__item">
-              Esperar a que un oponente se conecte. El registro e inicio de
-              sesión se realizan automáticamente, generando un usuario y
-              contraseña para cada cliente al ejecutar su clase correspondiente
-              (Client1/Client2){" "}
-            </li>
-            <li className="list__item">
-              Juega introduciendo coordenadas (x,y) desde la terminal (ej. 1,2
-              para fila 1, columna 2), una a la vez.
-            </li>
-            <li className="list__item">
-              Realizar movimientos en el tablero hasta que un jugador gane o se
-              declare un empate.{" "}
-            </li>
-          </ul>
-          <p>
-            Consulta la <strong>especificación completa</strong> en el{" "}
-            <a href="#linkRepo" className="!text-blue-400">
-              repositorio
-            </a>
-            .
-          </p>
+                  language="bash"
+                />
+              </li>
+              <li className="list__item">
+                Esperar a que un oponente se conecte. El registro e inicio de
+                sesión se realizan automáticamente, generando un usuario y
+                contraseña para cada cliente al ejecutar su clase
+                correspondiente (Client1/Client2){" "}
+              </li>
+              <li className="list__item">
+                Juega introduciendo coordenadas (x,y) desde la terminal (ej. 1,2
+                para fila 1, columna 2), una a la vez.
+              </li>
+              <li className="list__item">
+                Realizar movimientos en el tablero hasta que un jugador gane o
+                se declare un empate.{" "}
+              </li>
+            </ul>
+            <p>
+              Consulta la <strong>especificación completa</strong> en el{" "}
+              <a href="#linkRepo" className="!text-blue-400">
+                repositorio
+              </a>
+              .
+            </p>
+          </div>
         </div>
 
-        <div className="section__container">
-          <h2 className="section__title">Autenticación y Sesión</h2>
-          <ul className="section__content list list--bulleted">
-            <li className="list__item">
-              Los usuarios se registran e inician sesión automáticamente al
-              conectarse al servidor.
-            </li>
-            <li className="list__item">
-              El servidor genera un sessionId que el cliente envía en cada
-              solicitud.
-            </li>
-            <li className="list__item">
-              Las sesiones se gestionan mediante cookies para evitar
-              reautenticaciones innecesarias.
-            </li>
-          </ul>
-        </div>
-
-        {/* <!-- Capturas de Consola --> */}
-        <div class="section__container section__container--center">
-          <h2 class="section__title !mb-[4rem]">Capturas</h2>
-          <ImagesCarousel images={images} />
+        <div className="section container ">
+          <div className="!max-w-4xl w-full">
+            <h2 className="section__title">Autenticación y Sesión</h2>
+            <ul className="section__content list list--bulleted">
+              <li className="list__item">
+                Los usuarios se registran e inician sesión automáticamente al
+                conectarse al servidor.
+              </li>
+              <li className="list__item">
+                El servidor genera un sessionId que el cliente envía en cada
+                solicitud.
+              </li>
+              <li className="list__item">
+                Las sesiones se gestionan mediante cookies para evitar
+                reautenticaciones innecesarias.
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* <!-- Código y Demo --> */}
-        <div class="section__container gallery gallery--horizontal !w-auto">
+        <div className="section !flex-row container justify-center space-x-8">
           <Link
             id="linkRepo"
             href="https://github.com/PepeBeto-code/redes-p1"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            class="button button__text gallery__item button--principal"
+            className="button button__text gallery__item button--principal"
           >
             GitHub
           </Link>
         </div>
 
         {/* <!-- Retos y Aprendizajes --> */}
-        <div class="section__container section__container--center section__container--secondary section__container--full">
-          <h2 class="section__title">Retos y Aprendizajes</h2>
-          <ul className="section__content list list--bulleted">
-            <li className="list__item">
-              Diseño e implementación de un{" "}
-              <span className="section__content--highlighted">
-                {" "}
-                protocolo de comunicación{" "}
-              </span>
-              eficiente
-            </li>
-            <li className="list__item">
-              Gestión de múltiples clientes mediante{" "}
-              <span className="section__content--highlighted">sockets</span>
-            </li>
-            <li className="list__item">
-              Implementación de{" "}
-              <span className="section__content--highlighted">
-                {" "}
-                autenticación y sesiones{" "}
-              </span>{" "}
-              en una aplicación de red.
-            </li>
-            <li className="list__item ">
-              Manejo de{" "}
-              <span className="section__content--highlighted">
-                {" "}
-                persistencia y sincronización del estado{" "}
-              </span>{" "}
-              en un entorno multijugador.
-            </li>
-          </ul>
+        <div className="section  bg-[var(--secondary-color)]">
+          <div className="!max-w-4xl w-full container">
+            <h2 className="section__title">Retos y Aprendizajes</h2>
+            <ul className="section__content list list--bulleted">
+              <li className="list__item">
+                Diseño e implementación de un{" "}
+                <span className="section__content--highlighted">
+                  {" "}
+                  protocolo de comunicación{" "}
+                </span>
+                eficiente
+              </li>
+              <li className="list__item">
+                Gestión de múltiples clientes mediante{" "}
+                <span className="section__content--highlighted">sockets</span>
+              </li>
+              <li className="list__item">
+                Implementación de{" "}
+                <span className="section__content--highlighted">
+                  {" "}
+                  autenticación y sesiones{" "}
+                </span>{" "}
+                en una aplicación de red.
+              </li>
+              <li className="list__item ">
+                Manejo de{" "}
+                <span className="section__content--highlighted">
+                  {" "}
+                  persistencia y sincronización del estado{" "}
+                </span>{" "}
+                en un entorno multijugador.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>

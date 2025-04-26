@@ -10,6 +10,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@radix-ui/react-switch": "^1.2.2",
     "bootstrap": "^5.3.3",
     "embla-carousel-react": "^8.5.2",
     "lucide": "^0.484.0",
