@@ -240,7 +240,7 @@ export default function page() {
           href="https://github.com/PepeBeto-code/protocol-rdt3"
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="button button__text gallery__item button--principal"
+          className="button button--principal"
         >
           GitHub
         </Link>

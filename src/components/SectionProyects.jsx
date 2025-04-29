@@ -29,6 +29,30 @@ const proyects = [
     ],
   },
   {
+    name: "Storymap: Seguridad Vial en México",
+    src: "/proyectos/storymap",
+    description:
+      "Sitio web interactivo desarrollado para el Instituto de Geografía de la UNAM, con visualización de datos de seguridad vial mediante mapas responsivos y diseño accesible.",
+    images: [
+      {
+        vertical: "/images/storymap/storymapV1.png",
+        horizontal: "/images/storymap/storymap1.png",
+      },
+      {
+        vertical: "/images/storymap/storymapV2.png",
+        horizontal: "/images/storymap/storymap2.png",
+      },
+      {
+        vertical: "/images/storymap/storymapV3.png",
+        horizontal: "/images/storymap/storymap3.png",
+      },
+      {
+        vertical: "/images/storymap/storymapV4.png",
+        horizontal: "/images/storymap/storymap4.png",
+      },
+    ],
+  },
+  {
     name: "Sistema de Onboarding Digital",
     src: "/proyectos/onboarding",
     description:
@@ -71,9 +95,7 @@ export default function SectionProyects() {
           title={"Destacados del Catálogo"}
         >
           {proyects.map((p, index) => (
-            <Link href={p.src} key={index}>
-              <ExpandingCard proyect={p} />
-            </Link>
+            <ExpandingCard key={index} proyect={p} />
           ))}
         </EmblaCarousel>
       </div>
