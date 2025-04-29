@@ -51,7 +51,7 @@ export default function RootLayout({
     <Nav></Nav>
         {children}
                           {/* Footer */}
-    <footer className="p-6 text-center">
+    <footer className="p-6 text-center shadow-lg">
       <p className="footer__content">&copy; {new Date().getFullYear()} Mi portafolio</p>
       <Socials></Socials>
     </footer>

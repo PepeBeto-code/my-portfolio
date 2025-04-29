@@ -58,6 +58,16 @@ export default function ProyectCard({ proyect }) {
         ))}
       </div>
       <div className="flex flex-col items-start">
+        <div className="flex space-x-2 space-y-2 flex-wrap">
+          {proyect.skills.map((skill, index) => (
+            <div
+              key={index}
+              className="bg-[var(--primary-color)]  w-fit h-fit p-1 rounded-r-lg text-lg font-semibold text-[var(--bg-color)]"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
         <h3 className="card__title text-start">{proyect.name}</h3>
         <p className="card__text text-start">{proyect.description}</p>
       </div>

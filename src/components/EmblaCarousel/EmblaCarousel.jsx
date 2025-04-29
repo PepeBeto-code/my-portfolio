@@ -42,12 +42,20 @@ const EmblaCarousel = (props) => {
 
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {React.Children.map(children, (child, index) =>
-            React.cloneElement(child, {
-              index,
-              onExpand: () => emblaApi?.scrollTo(index),
-            })
-          )}
+          {React.Children.map(children, (child, index) => {
+            if (React.isValidElement(child) && child.type === Link) {
+              const inner = child.props.children;
+
+              return React.cloneElement(child, {
+                children: React.cloneElement(inner, {
+                  index,
+                  onExpand: () => emblaApi?.scrollTo(index),
+                }),
+              });
+            }
+
+            return child;
+          })}
         </div>
       </div>
     </section>

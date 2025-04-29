@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section bg-[var(--secondary-color)]">
+    <section id="contact" className=" py-12  bg-[var(--secondary-color)]">
       <div className="container !max-w-4xl">
         <div className="section__content">
           <motion.h2

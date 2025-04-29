@@ -1,14 +1,14 @@
 export const routes = [
     {
       title: 'Sobre mí',
-      path: "#about",
+      path: "/#about",
     },
     {
       title: 'Proyectos',
-      path: "#projects",
+      path: "/#projects",
     },
     {
       title: 'Contacto',
-      path: "#contact",
+      path: "/#contact",
     }
   ]

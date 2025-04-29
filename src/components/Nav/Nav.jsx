@@ -57,7 +57,7 @@ function MenuMovil() {
           <Toggle></Toggle>
         </div>
         <div
-          className={`${
+          className={`z-[10] ${
             pathname != "/"
               ? "position-fixed bottom-0 end-0 md:mr-20 mr-10 mb-8"
               : ""

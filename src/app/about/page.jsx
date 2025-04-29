@@ -36,7 +36,7 @@ export default function page() {
         <BackLink></BackLink>
       </div>
       <section className="section container !max-w-4xl">
-        <div className="relative w-[20rem] rounded-lg bg-white shadow-lg p-4 before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-10 before:h-10 before:bg-white before:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] before:rotate-45 before:translate-x-1/2 before:translate-y-1/2 z-0">
+        <div className="relative md:w-[20rem] w-[15rem] rounded-lg bg-white shadow-lg p-4 before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-10 before:h-10 before:bg-white before:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] before:rotate-45 before:translate-x-1/2 before:translate-y-1/2 z-0">
           <Image
             src="/images/yo.jpeg"
             alt="Yo"

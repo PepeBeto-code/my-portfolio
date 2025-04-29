@@ -13,18 +13,13 @@ export default function Home() {
     {/* Hero Section */}
     <HeroSection></HeroSection>
 
-    {/* Projects Section */}
-    {/* <Projects></Projects> */}
-
     <Skills2></Skills2>
 
+    {/* Projects Section */}
     <SectionProyects></SectionProyects>
 
-    {/* <Skills></Skills> */}
-
-
     {/* About Section */}
-    <section id="about" className="section flex !flex-col-reverse md:!flex-row justify-between container space-x-4 space-y-8">
+    <section id="about" className="container py-12 flex !flex-col-reverse md:!flex-row justify-between space-x-4 space-y-8">
       <div className="md:w-2/3">
         <About>
           <h2 className="section__title mt-4 md:mt-0">Sobre mí</h2>
@@ -32,7 +27,7 @@ export default function Home() {
         <OutboundLink href={`/about`} text={"Ver mas"} onClick={undefined}/>
       </div>
       <div className="flex items-center justify-center md:w-1/3">
-        <div className="relative w-[20rem] rounded-lg bg-white shadow-lg p-4 before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-10 before:h-10 before:bg-white before:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] before:rotate-45 before:translate-x-1/2 before:translate-y-1/2 z-0">
+        <div className="relative md:w-[20rem] w-[15rem] rounded-lg bg-white shadow-lg p-4 before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-10 before:h-10 before:bg-white before:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] before:rotate-45 before:translate-x-1/2 before:translate-y-1/2 z-0">
           <Image
             src="/images/yo.jpeg"
             alt="Yo"

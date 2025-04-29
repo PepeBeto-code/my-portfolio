@@ -7,8 +7,8 @@ import { FaJava } from "react-icons/fa";
 
 export default function Skills2() {
   return (
-    <div className="section md:h-[60vh] lg:h-[100vh] h-[100vh]">
-      <div className="md:h-2/5 flex justify-between container">
+    <div className="container py-12 md:h-[60vh] lg:h-[100vh]">
+      <div className="md:h-2/5 flex justify-between">
         <div className="flex md:max-w-xl flex-col md:items-start items-center justify-center mt-[15rem] md:mt-0">
           <h2 className="section__title">Tecnologias y Habilidades</h2>
           <p className="section__content">
@@ -32,7 +32,7 @@ export default function Skills2() {
           {/* <div className="absolute bottom-0 w-full h-full z-10 pointer-events-none bg-radial from-transparent to-black" /> */}
         </div>
       </div>
-      <div className="md:h-2/5 relative container flex md:items-center md:justify-end justify-center">
+      <div className="md:h-2/5 relative flex md:items-center md:justify-end justify-center">
         <div className="relative flex space-x-4 flex-wrap justify-center">
           <div className="absolute bottom-0 w-full h-10 bg-gradient-to-t from-[var(--bg-color)] to-transparent z-11 pointer-events-none" />
           <Image
@@ -76,7 +76,7 @@ export default function Skills2() {
           />
         </div>
       </div>
-      <div className="container md:h-1/5 flex items-start justify-center space-x-4 space-y-2 flex-wrap">
+      <div className="md:h-1/5 flex items-start justify-center space-x-4 space-y-2 flex-wrap">
         {skills.map((skill, index) => (
           <div
             key={index}
