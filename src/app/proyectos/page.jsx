@@ -27,6 +27,21 @@ const proyects = [
     ],
   },
   {
+    name: "Storymap: Seguridad Vial en México",
+    title: "Proyecto destacado",
+    description:
+      "Sitio web interactivo desarrollado para el Instituto de Geografía de la UNAM, con visualización de datos de seguridad vial mediante mapas responsivos y diseño accesible.",
+    src: "/proyectos/storymap",
+    image: "images/Chat/ChatV3.png",
+    images: [
+      "images/storymap/storymap1.png",
+      "images/storymap/storymap2.png",
+      "images/storymap/storymap3.png",
+      "images/storymap/storymap4.png",
+    ],
+    skills: ["JavaScript", "CSS3", "HTML5", "Leaflet.js"],
+  },
+  {
     name: "Sistema de Onboarding Digital",
     title: "Proyecto destacado",
     description:
@@ -43,9 +58,9 @@ const proyects = [
       "Spring Boot",
       "Angular",
       "Docker",
+      "PL/SQL",
       "PostgreSQL",
       "Sass",
-      "Spring Data Jpa",
     ],
   },
   {

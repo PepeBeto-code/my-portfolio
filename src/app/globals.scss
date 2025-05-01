@@ -233,8 +233,8 @@
     @apply mb-4 text-lg;
 
     &--highlighted{
+      font-weight: 800 !important;
       color: $text-secondary;
-      @apply font-semibold ;
     }
   }
 

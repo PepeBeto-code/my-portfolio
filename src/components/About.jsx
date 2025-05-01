@@ -5,13 +5,50 @@ export default function About({ children, page = false }) {
     <>
       {children}
       <p className="section__content mb-2">
-        Soy Desarrollador de Software con formación en Ciencias de la
-        Computación en la UNAM, y experiencia en desarrollo web y backend. He
-        trabajado en la creación de aplicaciones escalables utilizando
-        tecnologías como Java, Spring Boot, React, Angular y Laravel.
-        Actualmente, estoy ampliando mis conocimientos en el Instituto de
-        Geografía de la UNAM, donde previamente concluí mi servicio social y
-        ahora desarrollo proyectos que combinan tecnología con investigación.
+        Soy un{" "}
+        <span className="section__content--highlighted">
+          {" "}
+          Desarrollador de Software
+        </span>{" "}
+        con formación en
+        <span className="section__content--highlighted">
+          {" "}
+          Ciencias de la Computación en la UNAM
+        </span>{" "}
+        , especializado en
+        <span className="section__content--highlighted">
+          {" "}
+          backend y frontend
+        </span>{" "}
+        con
+        <span className="section__content--highlighted">
+          {" "}
+          Spring Boot, React, Angular y Laravel
+        </span>{" "}
+        . Me apasiona
+        <span className="section__content--highlighted">
+          {" "}
+          crear soluciones escalables y optimizar procesos
+        </span>{" "}
+        mediante tecnología.
+      </p>
+      <p className="section__content mb-2">
+        Actualmente, colaboro en el{" "}
+        <span className="section__content--highlighted">
+          {" "}
+          Instituto de Geografía de la UNAM
+        </span>{" "}
+        desarrollando proyectos que combinan
+        <span className="section__content--highlighted">
+          {" "}
+          tecnología con investigación
+        </span>{" "}
+        , aplicando
+        <span className="section__content--highlighted">
+          {" "}
+          bases de datos avanzadas, APIs RESTful y arquitectura eficiente
+        </span>{" "}
+        .
       </p>
       {page && (
         <p className="section__content mb-2">

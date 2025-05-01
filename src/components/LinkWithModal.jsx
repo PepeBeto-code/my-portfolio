@@ -27,12 +27,12 @@ export default function LinkWithModal({ href, text, exp }) {
         </ModalHeader>
         <ModalBody>{exp.descripcionLarga}</ModalBody>
         <ModalFooter>
-          <BackLink
+          <button
             onClick={toggle}
-            text="Cerrar"
-            href="#"
-            className={"!static "}
-          ></BackLink>
+            className={"button button--back button--primary !static "}
+          >
+            Cerrar
+          </button>
         </ModalFooter>
       </Modal>
     </>

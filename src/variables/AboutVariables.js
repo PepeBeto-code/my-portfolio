@@ -179,7 +179,7 @@ const experiencia = [
         actividad: "Curso Towa Software", 
         fechaCorta: "Oct 23",
         fechaCompleta: "Octubre 2023 - Noviembre 2023",
-        descripcionCorta: "Completé un curso intensivo y competitivo en Java, aprendiendo a escribir código limpio y estructurado con Java.",
+        descripcionCorta: "Completé un curso intensivo y competitivo en Java, aprendiendo a escribir código limpio y estructurado.",
         descripcionLarga: <DescripcionTowa />,
         skills:["Desarrollo de software", "Java", "Buenas Practicas"]
       },

@@ -259,7 +259,7 @@ export default function chatlive() {
             </li>
             <li className="list__item">
               <span className="section__content--highlighted">
-                SGestión de conversaciones{" "}
+                Gestión de conversaciones{" "}
               </span>
               Posibilidad de archivar chats para mantener el orden.
             </li>

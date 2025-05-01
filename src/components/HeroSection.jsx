@@ -38,8 +38,10 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Un desarrollador de software especializado en crear soluciones
-            eficientes con Java, PHP y React.
+            Un desarrollador de software especializado en soluciones escalables
+            con Java, Spring Boot, React y Next.js. Diseño y construyo
+            aplicaciones que mejoran procesos, automatizan tareas y optimizan la
+            gestión de datos.
           </motion.p>
           <Socials></Socials>
           <motion.a
