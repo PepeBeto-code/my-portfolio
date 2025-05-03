@@ -257,7 +257,7 @@ java Client2
         </div>
 
         {/* <!-- Retos y Aprendizajes --> */}
-        <div className="section">
+        <section className="section">
           <h2 className="section__subtitle">Retos y Aprendizajes</h2>
           <ul className="section__content list list--bulleted">
             <li className="list__item">
@@ -289,7 +289,7 @@ java Client2
               en un entorno multijugador.
             </li>
           </ul>
-        </div>
+        </section>
       </main>
     </>
   );

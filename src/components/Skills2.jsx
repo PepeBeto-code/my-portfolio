@@ -7,7 +7,7 @@ import { FaJava } from "react-icons/fa";
 
 export default function Skills2() {
   return (
-    <div className="container py-12 md:h-[60vh] lg:h-[100vh]">
+    <section className="container py-12 md:h-[60vh] lg:h-[100vh]">
       <div className="md:h-2/5 flex justify-between">
         <div className="flex md:max-w-xl flex-col md:items-start items-center justify-center mt-[15rem] md:mt-0">
           <h2 className="section__title">Tecnologias y Habilidades</h2>
@@ -86,6 +86,6 @@ export default function Skills2() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

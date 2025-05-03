@@ -43,6 +43,27 @@ const proyects = [
     skills: ["JavaScript", "CSS3", "HTML5", "Leaflet.js"],
   },
   {
+    name: "Página Informativa de Cremas Corporales",
+    title: "Proyecto destacado",
+    description:
+      "Sitio informativo desarrollado con Next.js para presentar reseñas, comparativas y recomendaciones de cremas corporales, optimizado para SEO y preparado para expansión.",
+    src: "/proyectos/creams",
+    image: "images/cremas/cremas_main.png",
+    images: [
+      "images/cremas/cremas1.png",
+      "images/cremas/cremas2.png",
+      "images/cremas/cremas3.png",
+    ],
+    skills: [
+      "NextJs",
+      "ReactJs",
+      "CSS Modules",
+      "Styled Components",
+      "Netlify",
+      "SEO",
+    ],
+  },
+  {
     name: "Sistema de Onboarding Digital",
     title: "Proyecto destacado",
     description:

@@ -24,14 +24,14 @@ export default function HeroSection() {
       {/* Bloque de contenido */}
       <div className="w-full md:w-1/2 flex items-center justify-center md:justify-start px-6 md:px-12 py-12 md:py-0">
         <div className="max-w-lg text-center md:text-left space-y-6">
-          <motion.h2
+          <motion.h1
             className="text-4xl sm:text-5xl section__title !font-extrabold"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
             Hola, soy José Alberto Miñon Velázquez
-          </motion.h2>
+          </motion.h1>
           <motion.p
             className="section__content "
             initial={{ opacity: 0 }}

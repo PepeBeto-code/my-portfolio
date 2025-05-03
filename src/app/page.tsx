@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <main>
     {/* Hero Section */}
     <HeroSection></HeroSection>
 
@@ -41,6 +41,6 @@ export default function Home() {
 
     {/* Contact Section */}
     <Contact />
-  </div>
+  </main>
   );
 }

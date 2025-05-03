@@ -53,6 +53,30 @@ const proyects = [
     ],
   },
   {
+    name: "Página Informativa de Cremas Corporales",
+    src: "/proyectos/creams",
+    description:
+      "Sitio informativo desarrollado con Next.js para presentar reseñas, comparativas y recomendaciones de cremas corporales, optimizado para SEO y preparado para expansión.",
+    images: [
+      {
+        vertical: "/images/cremas/cremasV1.png",
+        horizontal: "/images/cremas/cremas1.png",
+      },
+      {
+        vertical: "/images/cremas/cremasV2.png",
+        horizontal: "/images/cremas/cremas2.png",
+      },
+      {
+        vertical: "/images/cremas/cremasV3.png",
+        horizontal: "/images/cremas/cremas3.png",
+      },
+      {
+        vertical: "/images/cremas/cremasV4.png",
+        horizontal: "/images/cremas/cremas4.png",
+      },
+    ],
+  },
+  {
     name: "Sistema de Onboarding Digital",
     src: "/proyectos/onboarding",
     description:
