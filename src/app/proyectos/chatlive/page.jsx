@@ -52,7 +52,7 @@ export default function chatlive() {
           <BackLink></BackLink>
         </div>
 
-        <section class="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
+        <section className="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
           <div className="container flex flex-col items-center">
             <motion.h1
               className="section__title mb-4"
@@ -62,22 +62,22 @@ export default function chatlive() {
             >
               Proyecto de Chat en Tiempo Real
             </motion.h1>
-            <p class="section__content mb-6">
+            <p className="section__content mb-6">
               Comunicación instantánea segura con estados de mensajes en tiempo
               real.
             </p>
-            <div class="flex justify-center gap-4 mt-6">
+            <div className="flex justify-center gap-4 mt-6">
               <a
                 href="https://chat-live-client.vercel.app/login"
                 target="_blank"
-                class="button button--principal"
+                className="button button--principal"
               >
                 Ver Demo
               </a>
               <a
                 href="https://github.com/PepeBeto-code/chat-live.git"
                 target="_blank"
-                class="button button--secondary"
+                className="button button--secondary"
               >
                 Ver Código
               </a>
@@ -137,6 +137,7 @@ export default function chatlive() {
               <h3 className="section__subtitle">Frontend:</h3>
               <ul className="section__content list list--bulleted">
                 <li className="list__item">Next.js (React)</li>
+                <li className="list__item">Redux</li>
                 <li className="list__item">Javascript</li>
                 <li className="list__item">Tailwind CSS</li>
                 <li className="list__item">Socket.io</li>
@@ -180,21 +181,23 @@ export default function chatlive() {
           </div>
         </section>
 
-        <section class="section">
-          <h2 class="section__subtitle text-center">Capturas de Pantalla</h2>
+        <section className="section">
+          <h2 className="section__subtitle text-center">
+            Capturas de Pantalla
+          </h2>
 
-          <div class="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {images.map((img, index) => (
               <div
                 key={index}
-                class="bg-white rounded-lg shadow overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                className="bg-white rounded-lg shadow overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
               >
-                <div class="flex items-center gap-2 bg-gray-200 px-4 py-2">
-                  <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-                  <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
-                  <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                <div className="flex items-center gap-2 bg-gray-200 px-4 py-2">
+                  <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                  <span className="w-3 h-3 bg-green-500 rounded-full"></span>
                 </div>
-                <img src={img.src} alt={img.alt} class="w-full" />
+                <img src={img.src} alt={img.alt} className="w-full" />
               </div>
             ))}
           </div>
@@ -275,7 +278,7 @@ export default function chatlive() {
 
         {/* <!-- Código y Demo --> */}
         <div className="section">
-          <h2 class="section__subtitle text-center">Accede al Proyecto</h2>
+          <h2 className="section__subtitle text-center">Accede al Proyecto</h2>
           <div className="flex justify-center space-x-8">
             <a
               href="https://chat-live-client.vercel.app/login"

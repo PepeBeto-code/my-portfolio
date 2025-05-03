@@ -20,6 +20,7 @@ const proyects = [
       "Spring Boot",
       "WebSockets",
       "ReactJs",
+      "Redux",
       "NextJs",
       "PostgreSQL",
       "Spring Data Jpa",
@@ -57,6 +58,7 @@ const proyects = [
     skills: [
       "Spring Boot",
       "Angular",
+      "RxJS y Observables",
       "Docker",
       "PL/SQL",
       "PostgreSQL",
@@ -90,6 +92,37 @@ const proyects = [
     skills: ["Java", "Sockets Udp", "Redes"],
   },
 ];
+
+export const metadata = {
+  title: "Proyectos - Pepe dev",
+  description:
+    "Echa un vistazo a los proyectos que he desarrollado, donde aplico mis habilidades en desarrollo web, programación de sistemas y diseño de soluciones tecnológicas.",
+  keywords:
+    "proyectos, desarrollo web, JavaScript, React, Next.js, Angular, Java, programación, tecnologías web, soluciones tecnológicas",
+  openGraph: {
+    title: "Proyectos - Mi Portafolio",
+    description:
+      "Descubre los proyectos más importantes que he desarrollado, desde aplicaciones web hasta sistemas de software.",
+    url: "https://pepedigital.netlify.app/proyectos",
+    siteName: "Mi Portafolio",
+    images: [
+      {
+        url: "/images/portafolio.png", // Asegúrate de tener esta imagen en /public/images/portfolio/
+        width: 1200,
+        height: 630,
+        alt: "Proyectos - Mi Portafolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Proyectos - Mi Portafolio",
+    description:
+      "Echa un vistazo a los proyectos desarrollados con tecnologías como JavaScript, React, y más.",
+    images: ["/images/portafolio.png"],
+  },
+};
 
 export default function proyectos() {
   return (

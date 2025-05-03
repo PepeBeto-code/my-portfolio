@@ -243,7 +243,7 @@ java Client2
 
         {/* <!-- Código y Demo --> */}
         <div className="section flex flex-col items-center">
-          <h2 class="section__subtitle">Accede al Proyecto</h2>
+          <h2 className="section__subtitle">Accede al Proyecto</h2>
 
           <Link
             id="linkRepo"

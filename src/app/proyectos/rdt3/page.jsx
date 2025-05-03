@@ -42,7 +42,7 @@ export default function page() {
         <BackLink></BackLink>
       </div>
 
-      <section class="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
+      <section className="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
         <div className="container flex flex-col items-center">
           <motion.h1
             className="section__title mb-4"
@@ -52,15 +52,15 @@ export default function page() {
           >
             Implementación del Protocolo rdt3.0
           </motion.h1>
-          <p class="section__content mb-6">
+          <p className="section__content mb-6">
             Simulación de transmisión confiable sobre un canal no fiable
             utilizando Java y UDP
           </p>
-          <div class="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center gap-4 mt-6">
             <a
               href="https://github.com/PepeBeto-code/chat-live.git"
               target="_blank"
-              class="button button--principal"
+              className="button button--principal"
             >
               Ver Código
             </a>
@@ -235,7 +235,7 @@ export default function page() {
 
       {/* <!-- Código y Demo --> */}
       <section className="section flex flex-col items-center">
-        <h2 class="section__subtitle text-center">Accede al Proyecto</h2>
+        <h2 className="section__subtitle text-center">Accede al Proyecto</h2>
         <Link
           href="https://github.com/PepeBeto-code/protocol-rdt3"
           target="_blank"

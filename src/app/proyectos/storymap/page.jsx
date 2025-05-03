@@ -13,13 +13,44 @@ const images = [
   "/images/storymap/storymap4.png",
 ];
 
+export const metadata = {
+  title: "Storymap: Seguridad Vial en México",
+  description:
+    "Storymap interactivo para explorar visualmente la situación de la seguridad vial en México. Desarrollado con Leaflet.js, JavaScript, HTML5 y CSS3 para difusión pública del Instituto de Geografía de la UNAM.",
+  keywords:
+    "storymap, seguridad vial, mapas interactivos, Leaflet.js, JavaScript, HTML5, CSS3, Instituto de Geografía, UNAM, visualización de datos",
+  openGraph: {
+    title: "Storymap: Seguridad Vial en México",
+    description:
+      "Sitio web interactivo que permite explorar la seguridad vial en México mediante mapas interactivos y datos relevantes.",
+    url: "http://132.247.103.10:10006/istar-seguridad-vial/",
+    siteName: "Storymap Seguridad Vial",
+    images: [
+      {
+        url: "/images/storymap/storymap1.png", // asegúrate de tener esta imagen en /public/images/storymap/
+        width: 1200,
+        height: 630,
+        alt: "Storymap - Seguridad Vial en México",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Storymap: Seguridad Vial en México",
+    description:
+      "Storymap interactivo sobre seguridad vial en México, desarrollado con Leaflet.js y tecnologías web modernas.",
+    images: ["/images/storymap/storymap1.png"],
+  },
+};
+
 export default function page() {
   return (
-    <main class="">
+    <main className="">
       <div className="container">
         <BackLink></BackLink>
       </div>
-      <section class="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
+      <section className="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
         <div className="container flex flex-col items-center">
           <motion.h1
             className="section__title mb-4"
@@ -29,23 +60,23 @@ export default function page() {
           >
             Storymap: Seguridad Vial en México
           </motion.h1>
-          <p class="section__content !mb-6">
+          <p className="section__content !mb-6">
             Sitio web interactivo desarrollado para difundir información sobre
             seguridad vial a nivel nacional.
           </p>
           <a
             href="http://132.247.103.10:10006/istar-seguridad-vial/"
             target="_blank"
-            class="button button--principal"
+            className="button button--principal"
           >
             Ver Proyecto
           </a>
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Descripción General</h2>
-        <p class="mb-6">
+      <section className="section">
+        <h2 className="section__subtitle">Descripción General</h2>
+        <p className="mb-6">
           Este proyecto fue realizado en colaboración con el{" "}
           <strong className="section__content--highlighted">
             Instituto de Geografía de la UNAM
@@ -64,33 +95,33 @@ export default function page() {
         </p>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle text-center">Capturas de Pantalla</h2>
+      <section className="section">
+        <h2 className="section__subtitle text-center">Capturas de Pantalla</h2>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {images.map((img, index) => (
             <div
               key={index}
-              class="bg-white rounded-lg shadow overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-white rounded-lg shadow overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div class="flex items-center gap-2 bg-gray-200 px-4 py-2">
-                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-                <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
-                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+              <div className="flex items-center gap-2 bg-gray-200 px-4 py-2">
+                <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                <span className="w-3 h-3 bg-green-500 rounded-full"></span>
               </div>
               <img
                 src={img}
                 alt="Imagen de proyecto Onboarding"
-                class="w-full"
+                className="w-full"
               />
             </div>
           ))}
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Mis Aportaciones</h2>
-        <ul class="list-disc list-inside space-y-2">
+      <section className="section">
+        <h2 className="section__subtitle">Mis Aportaciones</h2>
+        <ul className="list-disc list-inside space-y-2">
           <li>
             Reestructuración del código CSS, dividiéndolo en archivos modulares
             por funcionalidad.
@@ -110,9 +141,9 @@ export default function page() {
         </ul>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Tecnologías Utilizadas</h2>
-        <ul class="list list--bulleted">
+      <section className="section">
+        <h2 className="section__subtitle">Tecnologías Utilizadas</h2>
+        <ul className="list list--bulleted">
           <li className="list__item">JavaScript</li>
           <li className="list__item">HTML5</li>
           <li className="list__item">CSS3 (con variables personalizadas)</li>
@@ -126,9 +157,9 @@ export default function page() {
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Resultados</h2>
-        <p class="mb-4">
+      <section className="section">
+        <h2 className="section__subtitle">Resultados</h2>
+        <p className="mb-4">
           El sitio web resultante permite al público explorar visualmente datos
           de seguridad vial en México de forma interactiva, clara y adaptada a
           distintos dispositivos. El proyecto se encuentra actualmente{" "}
@@ -137,12 +168,12 @@ export default function page() {
         </p>
       </section>
 
-      <section class="section flex flex-col items-center">
-        <h2 class="text-2xl font-semibold mb-6">Accede al Proyecto</h2>
+      <section className="section flex flex-col items-center">
+        <h2 className="text-2xl font-semibold mb-6">Accede al Proyecto</h2>
         <a
           href="http://132.247.103.10:10006/istar-seguridad-vial/"
           target="_blank"
-          class="button  button--principal"
+          className="button  button--principal"
         >
           Ver Sitio Web
         </a>

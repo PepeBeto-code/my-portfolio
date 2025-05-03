@@ -9,7 +9,7 @@ const Header = () => {
           alt="Logo "
           width={40} // Ancho en píxeles
           height={40} // Altura en píxeles
-          class="header__logo"
+          className="header__logo"
           priority // Opción para cargar inmediatamente
         />
         <nav>

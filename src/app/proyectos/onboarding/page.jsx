@@ -19,30 +19,61 @@ const images = [
   "/images/onboarding/onboarding6.png",
 ];
 
+export const metadata = {
+  title: "Onboarding Digital - Registro Seguro de Clientes",
+  description:
+    "Plataforma de onboarding digital para registrar nuevos clientes de forma eficiente y segura, con autenticación JWT, cifrado AES-256, auditoría y más.",
+  keywords:
+    "onboarding, registro digital, clientes, autenticación JWT, cifrado AES-256, auditoría, Java, Spring Boot, Angular, Docker, PostgreSQL, SaaS",
+  openGraph: {
+    title: "Onboarding Digital - Registro Seguro de Clientes",
+    description:
+      "Plataforma segura de onboarding digital con autenticación, cifrado, gestión por etapas y auditoría.",
+    url: "https://onboarding-app-jqzc.onrender.com/lading-page",
+    siteName: "Onboarding Digital",
+    images: [
+      {
+        url: "/images/onboarding/onboarding1.png", // asegúrate de tener esta imagen en public/images/onboarding/
+        width: 1200,
+        height: 630,
+        alt: "Onboarding Digital - Registro de clientes",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Onboarding Digital - Registro Seguro de Clientes",
+    description:
+      "Onboarding digital eficiente y seguro con autenticación JWT, cifrado AES-256 y auditoría.",
+    images: ["/images/onboarding/onboarding1.png"],
+  },
+};
+
 export default function Onboardin() {
   return (
-    <main class="">
+    <main>
       <div className="container">
         <BackLink></BackLink>
       </div>
-      <section class="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
+      <section className="py-16 shadow-[0_11px_6px_-1px_rgba(0,0,0,0.1)]">
         <div className="container flex flex-col items-center">
-          <h1 class="section__title mb-4">Sistema de Onboarding Digital</h1>
-          <p class="section__content mb-6">
+          <h1 className="section__title mb-4">Sistema de Onboarding Digital</h1>
+          <p className="section__content mb-6">
             Plataforma segura para el registro eficiente de nuevos clientes.
           </p>
-          <div class="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center gap-4 mt-6">
             <a
               href="https://onboarding-app-jqzc.onrender.com/lading-page"
               target="_blank"
-              class="button button--principal"
+              className="button button--principal"
             >
               Ver Demo
             </a>
             <a
               href="https://github.com/PepeBeto-code/onboarding"
               target="_blank"
-              class="button button--secondary"
+              className="button button--secondary"
             >
               Ver Código
             </a>
@@ -50,9 +81,9 @@ export default function Onboardin() {
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Descripción</h2>
-        <p class="">
+      <section className="section">
+        <h2 className="section__subtitle">Descripción</h2>
+        <p className="">
           El Sistema de Onboarding Digital facilita el registro de nuevos
           clientes en múltiples etapas, asegurando una experiencia intuitiva,
           segura y auditable desde el inicio hasta la finalización del proceso.
@@ -94,6 +125,9 @@ export default function Onboardin() {
             <h3 className="section__subtitle">Frontend:</h3>
             <ul className="section__content list list--bulleted">
               <li className="list__item">Angular 16</li>
+              <li className="list__item">
+                RxJS (manejo de Observables y programación reactiva)
+              </li>
               <li className="list__item">Javascript</li>
               <li className="list__item">Tailwind CSS</li>
               <li className="list__item">Metodología BEM</li>
@@ -131,33 +165,33 @@ export default function Onboardin() {
         </div>
       </div>
 
-      <section class="section">
-        <h2 class="section__subtitle text-center">Capturas de Pantalla</h2>
+      <section className="section">
+        <h2 className="section__subtitle text-center">Capturas de Pantalla</h2>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {images.map((img, index) => (
             <div
               key={index}
-              class="bg-white rounded-lg shadow overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              className="bg-white rounded-lg shadow overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
             >
-              <div class="flex items-center gap-2 bg-gray-200 px-4 py-2">
-                <span class="w-3 h-3 bg-red-500 rounded-full"></span>
-                <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
-                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+              <div className="flex items-center gap-2 bg-gray-200 px-4 py-2">
+                <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                <span className="w-3 h-3 bg-green-500 rounded-full"></span>
               </div>
               <img
                 src={img}
                 alt="Imagen de proyecto Onboarding"
-                class="w-full"
+                className="w-full"
               />
             </div>
           ))}
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Flujo de Usuario</h2>
-        <ol class="list list--numbered">
+      <section className="section">
+        <h2 className="section__subtitle">Flujo de Usuario</h2>
+        <ol className="list list--numbered">
           <li className="list__item">Registro o inicio de sesión.</li>
           <li className="list__item">Inicio del proceso de onboarding.</li>
           <li className="list__item">
@@ -169,38 +203,64 @@ export default function Onboardin() {
         </ol>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Reto Técnico y Solución</h2>
-        <p class="mb-4">
+      <section className="section">
+        <h2 className="section__subtitle">Reto Técnico y Solución</h2>
+        <p className="mb-4">
           El principal desafío fue diseñar un flujo resiliente que permitiera a
-          los usuarios continuar su registro de manera segura y auditable. Se
-          implementaron JWT para autenticación segura, cifrado AES-256 para
-          proteger datos sensibles y triggers SQL para auditoría de acciones.
+          los usuarios continuar su registro de forma segura y trazable. Se
+          implementaron:
         </p>
+        <ul className="list list--bulleted">
+          <li className="list__item">
+            <span className="section__content--highlighted">JWT</span> para
+            autenticación segura
+          </li>
+          <li className="list__item">
+            {" "}
+            <span className="section__content--highlighted">
+              Cifrado AES-256
+            </span>
+            para proteger datos sensibles
+          </li>
+          <li className="list__item">
+            {" "}
+            <span className="section__content--highlighted">Triggers SQL</span>
+            para auditoría de acciones
+          </li>
+          <li className="list__item">
+            {" "}
+            <span className="section__content--highlighted">
+              RxJS y observables
+            </span>{" "}
+            en el frontend para el manejo de formularios y para gestionar
+            eventos asincrónicos de manera eficiente y reactiva
+          </li>
+        </ul>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle">Resultados</h2>
-        <p class="mb-4">
+      <section className="section">
+        <h2 className="section__subtitle">Resultados</h2>
+        <p className="mb-4">
           Se logró una plataforma robusta, segura y desplegada en la nube,
-          permitiendo el onboarding de clientes de manera ágil y eficiente.
+          permitiendo el onboarding de clientes de manera ágil, eficiente y con
+          capacidad de auditoría.
         </p>
       </section>
 
-      <section class="section">
-        <h2 class="section__subtitle text-center">Accede al Proyecto</h2>
-        <div class="flex justify-center gap-4">
+      <section className="section">
+        <h2 className="section__subtitle text-center">Accede al Proyecto</h2>
+        <div className="flex justify-center gap-4">
           <a
             href="https://onboarding-app-jqzc.onrender.com/lading-page"
             target="_blank"
-            class="button button--principal"
+            className="button button--principal"
           >
             Ver Demo
           </a>
           <a
             href="https://github.com/PepeBeto-code/onboarding"
             target="_blank"
-            class="button button--secondary"
+            className="button button--secondary"
           >
             Ver Código
           </a>
