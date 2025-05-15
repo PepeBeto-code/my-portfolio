@@ -145,7 +145,7 @@ function MenuMovil() {
           })}
         </div>
         <Socials></Socials>
-        <div className="absolute bottom-0 right-0 w-full text-center  text-xs text-gray-500">
+        <div className="absolute bottom-2 right-0 w-full text-center  text-xs text-gray-500">
           <p>Hecho con amor por Pepe Miñón</p>
         </div>
       </nav>

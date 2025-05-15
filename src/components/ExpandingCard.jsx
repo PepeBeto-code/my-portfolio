@@ -74,7 +74,7 @@ export default function ExpandingCard({ index, onExpand, proyect }) {
         onMouseLeave={() => setIsHovered(false)}
         className={`relative embla__slide h-[30rem] max-w-full overflow-hidden  ${
           isHovered
-            ? "!w-[90%] md:!w-[50rem] z-10"
+            ? "!w-[16rem] md:!w-[50rem] z-10"
             : "!w-[16rem] md:!w-[19rem] z-1"
         }  flex flex-col items-start justify-end text-white rounded-xl overflow-hidden cursor-pointer`}
         role="group"
