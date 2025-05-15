@@ -4,11 +4,16 @@ import Socials from "@/components/Socials";
 
 export default function HeroSection() {
   return (
-    <section className="w-full md:h-[60vh] lg:h-[100vh] h-[100vh] flex flex-col items-center md:flex-row">
+    <section
+      className="w-full md:h-[60vh] lg:h-[100vh] h-[100vh] flex flex-col items-center md:flex-row"
+      aria-label="Sección principal de presentación"
+    >
       {/* Bloque de imagen */}
       <div
         className="w-full relative md:w-1/2 h-97 sm:h-80 md:h-full bg-cover bg-center"
         style={{ backgroundImage: `url(/images/home.png)` }}
+        role="img"
+        aria-label="Fondo con imagen ilustrativa"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -22,13 +27,14 @@ export default function HeroSection() {
       </div>
 
       {/* Bloque de contenido */}
-      <div className="w-full md:w-1/2 flex items-center justify-center md:justify-start px-6 md:px-12 py-12 md:py-0">
+      <div className="w-full md:w-1/2 flex items-center justify-center px-6 md:px-12 py-12 md:py-0">
         <div className="max-w-lg text-center md:text-left space-y-6">
           <motion.h1
             className="text-4xl sm:text-5xl section__title !font-extrabold"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
+            tabIndex={-1}
           >
             Hola, soy José Alberto Miñon Velázquez
           </motion.h1>
@@ -50,6 +56,8 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
+            role="button"
+            tabIndex={0}
           >
             Ver proyectos
           </motion.a>

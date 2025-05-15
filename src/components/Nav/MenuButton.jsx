@@ -11,10 +11,14 @@ function MenuBoton({ active, onClick }) {
       <button
         onClick={onClick}
         type="button"
-        aria-label="Open contact menu"
-        aria-controls="contact-menu"
-        aria-expanded="false"
-        className={`menuToggle ${active ? `x` : ""}`}
+        aria-expanded={active}
+        aria-controls="menu-principal"
+        aria-label={
+          active ? "Cerrar menú de navegación" : "Abrir menú de navegación"
+        }
+        className={`menuToggle focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--primary-color)] rounded ${
+          active ? `x` : ""
+        }`}
       ></button>
     </div>
   );

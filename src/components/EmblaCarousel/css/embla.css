@@ -44,14 +44,12 @@
 
     .embla__slide {
       flex: 0 0 var(--slide-size-sm);
-      padding-left: var(--slide-spacing-sm);
     }
   }
 
   @media (min-width: 1200px) {
     .embla__slide {
       flex: 0 0 var(--slide-size-lg);
-      padding-left: 1rem;
     }
   }
 

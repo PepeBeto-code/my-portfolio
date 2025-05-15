@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { p } from "motion/react-client";
 import Link from "next/link";
 
@@ -10,6 +10,8 @@ export default function ExpandingCard({ index, onExpand, proyect }) {
   const [current, setCurrent] = useState(0);
 
   const cardRef = useRef(null);
+  const reduceMotion = useReducedMotion(); // respeta preferencias SO
+
   const [expandDirection, setExpandDirection] = useState("right");
 
   useEffect(() => {
@@ -41,70 +43,89 @@ export default function ExpandingCard({ index, onExpand, proyect }) {
       setCurrent((prev) => (prev + 1) % proyect.images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [proyect.images.length]);
 
-  const baseWidth = 350;
+  const baseWidth = 150;
   const expandedWidth = 950;
 
+  /* Variantes de animación */
+  const widthAnim = {
+    initial: { width: baseWidth },
+    animate: { width: isHovered ? expandedWidth : baseWidth },
+    transition: reduceMotion
+      ? { duration: 0 } // sin animación si reduce-motion
+      : { duration: 0.4, ease: "easeInOut" },
+  };
+
+  /* ALT o role para imágenes de fondo */
+  const imgLabel = `Captura del proyecto ${proyect.name}`;
+
   return (
-    <Link href={proyect.src}>
-      <div
+    <Link
+      href={proyect.src}
+      aria-label={`Ir al detalle del proyecto ${proyect.name}`}
+      className=" focus:outline-none focus-visible:ring-2 ring-offset-2 ring-[var(--primary-color)] rounded-lg"
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
+    >
+      <motion.article
         ref={cardRef}
-        className={`embla__slide`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        className={`relative embla__slide h-[30rem] max-w-full overflow-hidden  ${
+          isHovered
+            ? "!w-[90%] md:!w-[50rem] z-10"
+            : "!w-[16rem] md:!w-[19rem] z-1"
+        }  flex flex-col items-start justify-end text-white rounded-xl overflow-hidden cursor-pointer`}
+        role="group"
+        aria-labelledby={`proj-title-${proyect.name}`}
+        layout
       >
-        <motion.div
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
-          className={`relative h-[30rem] ${
-            isHovered ? "z-10" : "z-1"
-          }  flex flex-col items-start justify-end text-white rounded-xl overflow-hidden cursor-pointer`}
-          initial={{ width: baseWidth }}
-          animate={{
-            width: isHovered ? expandedWidth : baseWidth,
-          }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-        >
-          <div className="absolute bottom-0 w-full h-full z-10 pointer-events-none bg-radial from-transparent to-black" />
+        <div
+          aria-hidden="true"
+          className="absolute bottom-0 w-full h-full z-10 pointer-events-none bg-radial from-transparent to-black"
+        />
 
-          {proyect.images.map((src, i) => (
-            <div
-              key={i}
-              className={`absolute inset-0 w-full h-full bg-cover bg-center sm:bg-center md:bg-right
+        {proyect.images.map((src, i) => (
+          <div
+            key={i}
+            className={`absolute inset-0 w-full h-full bg-cover bg-center sm:bg-center md:bg-right
             transition-opacity duration-1000 ${
               i === current ? "opacity-100" : "opacity-0"
             }`}
-              style={{
-                backgroundImage: isHovered
-                  ? `url(${src.horizontal})`
-                  : `url(${src.vertical})`,
-              }}
-            />
-          ))}
-          <div className="p-4 relative z-10">
-            <h3 className="text-xl font-bold">Proyecto destacado</h3>
-            <p className="text-sm text-white">
-              {/* Texto siempre visible */}
-              {proyect.name}
-            </p>
+            style={{
+              backgroundImage: isHovered
+                ? `url(${src.horizontal})`
+                : `url(${src.vertical})`,
+            }}
+            role="img"
+            aria-label={imgLabel}
+          />
+        ))}
+        <div className="p-4 relative z-10">
+          <h3 id={`proj-title-${proyect.name}`} className="text-xl font-bold">
+            Proyecto destacado
+          </h3>
+          <p className="text-sm text-white">
+            {/* Texto siempre visible */}
+            {proyect.name}
+          </p>
 
-            <AnimatePresence>
-              {isHovered && (
-                <motion.p
-                  className="mt-2 text-sm text-white"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {proyect.description}
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </div>
-        </motion.div>
-      </div>
+          <AnimatePresence>
+            {isHovered && (
+              <motion.p
+                className="mt-2 text-sm text-white"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={reduceMotion ? { duration: 0 } : { duration: 0.3 }}
+              >
+                {proyect.description}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </div>
+      </motion.article>
     </Link>
   );
 }

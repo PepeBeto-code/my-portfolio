@@ -104,9 +104,15 @@ const proyects = [
 
 export default function SectionProyects() {
   return (
-    <section id="projects" className="py-12 bg-[var(--secondary-color)]">
+    <section
+      id="projects"
+      className="py-12 bg-[var(--secondary-color)]"
+      aria-labelledby="projects-heading"
+    >
       <div className="flex flex-col container md:items-start items-center justify-center !mb-0">
-        <h2 className="section__title">Proyectos Destacados</h2>
+        <h2 id="projects-heading" className="section__title">
+          Proyectos Destacados
+        </h2>
         <p className="section__content max-w-2xl !mb-0">
           He trabajado en una variedad de proyectos y he aprendido mucho en cada
           uno de ellos. Aquí te muestro algunos de los más destacados.

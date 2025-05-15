@@ -6,25 +6,25 @@ export default function About({ children, page = false }) {
       {children}
       <p className="section__content mb-2">
         Soy un{" "}
-        <span className="section__content--highlighted">
+        <strong className="section__content--highlighted">
           {" "}
           Desarrollador de Software
-        </span>{" "}
+        </strong>{" "}
         con formación en
-        <span className="section__content--highlighted">
+        <strong className="section__content--highlighted">
           {" "}
           Ciencias de la Computación en la UNAM
-        </span>{" "}
+        </strong>{" "}
         , especializado en
         <span className="section__content--highlighted">
           {" "}
           backend y frontend
         </span>{" "}
         con
-        <span className="section__content--highlighted">
+        <strong className="section__content--highlighted">
           {" "}
           Spring Boot, React, Angular y Laravel
-        </span>{" "}
+        </strong>{" "}
         . Me apasiona
         <span className="section__content--highlighted">
           {" "}

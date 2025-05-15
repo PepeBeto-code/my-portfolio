@@ -6,11 +6,15 @@ import Swal from "sweetalert2";
 
 const Contact = () => {
   const formRef = useRef(null);
+  const statusRef = useRef(null);
   const [isLoading, setIsLoadig] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoadig(true);
+    setStatusMessage("");
+
     const form = event.currentTarget;
 
     const formData = new FormData(form);
@@ -21,17 +25,23 @@ const Contact = () => {
     });
 
     if (response.ok) {
+      setStatusMessage("Mensaje enviado con éxito.");
+      form.reset();
       Swal.fire({
         title: "Mensaje enviado con éxito!",
         icon: "success",
         draggable: true,
+      }).then(() => {
+        statusRef.current?.focus();
       });
-      form.reset(); // Limpia el formulario
     } else {
+      setStatusMessage("Hubo un error al enviar el mensaje.");
       Swal.fire({
         title: "Hubo un error al enviar el mensaje.",
         icon: "error",
         draggable: true,
+      }).then(() => {
+        statusRef.current?.focus();
       });
     }
 
@@ -39,7 +49,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className=" py-12  bg-[var(--secondary-color)]">
+    <section
+      id="contact"
+      aria-labelledby="contact-title"
+      className=" py-12  bg-[var(--secondary-color)]"
+    >
       <div className="container !max-w-4xl">
         <div className="section__content">
           <motion.h2
@@ -47,6 +61,7 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
+            id="contact-title"
           >
             Contacto
           </motion.h2>
@@ -56,6 +71,7 @@ const Contact = () => {
               href="mailto:jose-alberto@ciencias.unam.mx"
               rel="noopener noreferrer nofollow"
               className="!text-blue-400"
+              aria-label="Enviar correo a jose-alberto@ciencias.unam.mx"
             >
               jose-alberto@ciencias.unam.mx
             </a>
@@ -64,6 +80,7 @@ const Contact = () => {
               href="https://wa.me/5631303570"
               rel="noopener noreferrer nofollow"
               className="!text-green-400"
+              aria-label="Enviar mensaje por WhatsApp"
             >
               WhatsApp
             </a>
@@ -120,12 +137,30 @@ const Contact = () => {
             <div className="flex flex items-center justify-center">
               <button
                 disabled={isLoading}
+                aria-busy={isLoading}
                 className="button button--principal"
                 type="submit"
               >
                 {isLoading ? <Spinner size="sm" color="black" /> : "Enviar"}
               </button>
             </div>
+
+            {/* Área oculta para lectores de pantalla */}
+            {statusMessage && (
+              <div
+                ref={statusRef}
+                tabIndex={-1}
+                aria-live="polite"
+                aria-atomic="true"
+                className={`mt-4 p-3 text-sm rounded-lg ${
+                  statusMessage.includes("éxito")
+                    ? "bg-green-100 text-green-800"
+                    : "bg-red-100 text-red-800"
+                }`}
+              >
+                {statusMessage}
+              </div>
+            )}
           </form>
         </div>
       </div>

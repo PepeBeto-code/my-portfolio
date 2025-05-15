@@ -39,7 +39,7 @@ export default function page() {
         <div className="relative md:w-[20rem] m-auto w-[15rem] rounded-lg bg-white shadow-lg p-4 before:content-[''] before:absolute before:bottom-0 before:right-0 before:w-10 before:h-10 before:bg-white before:shadow-[5px_5px_10px_rgba(0,0,0,0.2)] before:rotate-45 before:translate-x-1/2 before:translate-y-1/2 z-0">
           <Image
             src="/images/yo.jpeg"
-            alt="Yo"
+            alt="Fotografía de José Alberto Miñón Velázquez, desarrollador de software"
             width={320}
             height={320}
             className="rounded-lg relative z-10 scale-110 -translate-y-6 shadow-xl m-auto"
@@ -68,54 +68,54 @@ export default function page() {
         <div className="w-full flex items-center justify-center md:justify-start">
           <ul className="list list--bulleted">
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Desarrollo de Software:
-              </span>
+              </strong>
               Arquitectura limpia, modularización y buenas prácticas de código.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Optimización de Código:
-              </span>
+              </strong>
               Refactorización para mejorar legibilidad y eficiencia.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 {" "}
                 Diseño de APIs:
-              </span>
+              </strong>
               Documentación con Swagger, RESTful, y mejores prácticas de
               endpoints.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Gestión de Bases de Datos:{" "}
-              </span>
+              </strong>
               Modelado y optimización de esquemas relacionales.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Desarrollo Full-Stack:
-              </span>
+              </strong>
               Backend y frontend con tecnologías modernas.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Control de Versiones:{" "}
-              </span>
+              </strong>
               Git, GitHub, GitLab y manejo de flujos de trabajo.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Trabajo en Equipo:
-              </span>
+              </strong>
               Colaboración en proyectos ágiles y uso de herramientas como Jira y
               Trello.
             </li>
             <li className="list__item">
-              <span className="section__content--highlighted">
+              <strong className="section__content--highlighted">
                 Aprendizaje Rápido:
-              </span>
+              </strong>
               Adaptabilidad a nuevas tecnologías y metodologías.
             </li>
           </ul>
@@ -136,15 +136,15 @@ export default function page() {
 
               <ul className="list list--bulleted section__content">
                 <li className="list__item">
-                  <span className="section__content--highlighted">
+                  <strong className="section__content--highlighted">
                     Laravel{" "}
-                  </span>
+                  </strong>
                   (MVC, APIs REST, Backpack)
                 </li>
                 <li className="list__item">
-                  <span className="section__content--highlighted">
+                  <strong className="section__content--highlighted">
                     Spring Boot
-                  </span>
+                  </strong>
                 </li>
               </ul>
             </div>
@@ -153,23 +153,27 @@ export default function page() {
             <h3 className="card__title">Frontend</h3>
             <ul className="list list--bulleted section__content">
               <li className="list__item">
-                <span className="section__content--highlighted">Angular</span>
+                <strong className="section__content--highlighted">
+                  Angular
+                </strong>
                 (Experiencia modularizando y optimizando código)
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">
+                <strong className="section__content--highlighted">
                   React / Next.js
-                </span>
+                </strong>
                 (Experiencia con UI/UX y Seo)
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">
+                <strong className="section__content--highlighted">
                   HTML5, CSS3, SASS{" "}
-                </span>
-                (Responsive Design, Metodologia BEM)
+                </strong>
+                (strong Design, Metodologia BEM)
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">Leaflet</span>
+                <strong className="section__content--highlighted">
+                  Leaflet
+                </strong>
                 (Mapas interactivos y visualización geoespacial)
               </li>
             </ul>
@@ -181,15 +185,17 @@ export default function page() {
 
             <ul className="list list--bulleted section__content">
               <li className="list__item">
-                <span className="section__content--highlighted">MySQL</span>
+                <strong className="section__content--highlighted">MySQL</strong>
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">
+                <strong className="section__content--highlighted">
                   PostgreSQL
-                </span>
+                </strong>
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">PostGIS</span>
+                <strong className="section__content--highlighted">
+                  PostGIS
+                </strong>
                 (Uso en geoportales)
               </li>
             </ul>
@@ -199,16 +205,16 @@ export default function page() {
 
             <ul className="list list--bulleted section__content">
               <li className="list__item">
-                <span className="section__content--highlighted">AWS</span>
+                <strong className="section__content--highlighted">AWS</strong>
                 (Lambda, Lex, Microservicios)
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">
+                <strong className="section__content--highlighted">
                   Docker / Docker Compose
-                </span>
+                </strong>
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">NGINX</span>
+                <strong className="section__content--highlighted">NGINX</strong>
               </li>
             </ul>
           </div>
@@ -217,21 +223,20 @@ export default function page() {
 
             <ul className="list list--bulleted section__content">
               <li className="list__item">
-                <span className="section__content--highlighted">Swagger </span>
+                <strong className="section__content--highlighted">
+                  Swagger{" "}
+                </strong>
                 (Documentación de APIs)
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted"></span>
-              </li>
-              <li className="list__item">
-                <span className="section__content--highlighted">
+                <strong className="section__content--highlighted">
                   Git, GitHub, GitLab
-                </span>
+                </strong>
               </li>
               <li className="list__item">
-                <span className="section__content--highlighted">
+                <strong className="section__content--highlighted">
                   Apache Airflow
-                </span>
+                </strong>
                 (Ingenieria de datos)
               </li>
             </ul>
@@ -260,13 +265,14 @@ export default function page() {
         <h3 className="section__subtitle">Proyectos Destacados</h3>
         <ul className="list list--bulleted section__content">
           <li className="list__item flex flex-wrap">
-            <span className="section__content--highlighted contents">
+            <strong className="section__content--highlighted contents">
               ChatLive:
-            </span>{" "}
+            </strong>{" "}
             Un chat en tiempo real con funcionalidades avacontentsnzadas.
             <Link
               href={"/proyectos/chatlive"}
               className="flex items-center ml-2 button"
+              aria-label="Ver proyecto ChatLive"
             >
               <MoveRight />
             </Link>
@@ -280,6 +286,7 @@ export default function page() {
             <Link
               href={"/proyectos/tic-tac-toe"}
               className="flex items-center ml-2 button"
+              aria-label="Ver proyecto Juego del Gato"
             >
               <MoveRight />
             </Link>

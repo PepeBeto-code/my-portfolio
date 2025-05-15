@@ -26,7 +26,11 @@ const EmblaCarousel = (props) => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <section className="embla">
+    <section
+      className="embla"
+      aria-label="Carrusel de proyectos destacados"
+      role="region"
+    >
       <div className="embla__controls mb-2">
         <Link
           href={"/proyectos"}
@@ -35,8 +39,16 @@ const EmblaCarousel = (props) => {
           Ver Todos
         </Link>
         <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <PrevButton
+            onClick={onPrevButtonClick}
+            disabled={prevBtnDisabled}
+            aria-label="Proyecto anterior"
+          />
+          <NextButton
+            onClick={onNextButtonClick}
+            disabled={nextBtnDisabled}
+            aria-label="Proyecto siguiente"
+          />
         </div>
       </div>
 
@@ -46,6 +58,9 @@ const EmblaCarousel = (props) => {
             React.cloneElement(child, {
               index,
               onExpand: () => emblaApi?.scrollTo(index),
+              "aria-roledescription": "slide",
+              role: "group",
+              "aria-label": `Proyecto ${index + 1} de ${children.length}`,
             })
           )}
         </div>

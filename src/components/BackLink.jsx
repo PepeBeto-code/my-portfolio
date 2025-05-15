@@ -21,8 +21,10 @@ export default function BackLink({ text = "Regresar", className }) {
     <button
       onClick={handleClick}
       className={`button button--back button--primary ${className}`}
+      aria-label={`Volver atrás${text ? `: ${text}` : ""}`}
+      type="button"
     >
-      <MoveLeft />
+      <MoveLeft aria-hidden="true" focusable="false" />
       <p className="text-base">{text}</p>
     </button>
   );

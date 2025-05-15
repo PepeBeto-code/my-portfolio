@@ -1,7 +1,6 @@
 import React from "react";
 import BackLink from "../../components/BackLink";
 import ProyectCard from "../../components/ProyectCard";
-import Link from "next/link";
 
 const proyects = [
   {
@@ -165,9 +164,7 @@ export default function proyectos() {
       <div className="container !pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] w-full ">
           {proyects.map((p, index) => (
-            <Link href={p.src} key={index}>
-              <ProyectCard proyect={p}></ProyectCard>
-            </Link>
+            <ProyectCard key={index} proyect={p} href={p.src}></ProyectCard>
           ))}
         </div>
       </div>

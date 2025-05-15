@@ -15,16 +15,22 @@ export default function Toggle() {
   return (
     <form>
       <div className="flex items-center space-x-2">
+        {/* Etiqueta accesible para el switch */}
+        <label htmlFor="theme-toggle" className="sr-only">
+          Cambiar a modo {isDark ? "claro" : "oscuro"}
+        </label>
         <Switch.Root
           checked={isDark}
           onCheckedChange={toggleTheme}
           className="p-2 w-[100px] bg-[#0b0b0f] !rounded-full relative data-[state=checked]:!bg-[var(--primary-color)]"
           id="theme-toggle"
+          aria-label="Activar o desactivar modo oscuro"
+          title="Alternar modo oscuro"
         >
           <Switch.Thumb className="block w-fit !bg-white rounded-full transition-transform duration-200 transform translate-x-1 data-[state=checked]:translate-x-12">
             <Image
               src="/android-chrome-512x512.png"
-              alt="Logo"
+              alt="Icono del tema"
               width={40}
               height={40}
               className="w-[2rem]"
