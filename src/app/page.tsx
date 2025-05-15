@@ -24,6 +24,7 @@ export default function Home() {
         <About>
           <h2 className="section__title mt-4 md:mt-0">Sobre mí</h2>
         </About>
+        {/* @ts-expect-error */}
         <OutboundLink href={`/about`} text={"Ver mas"} onClick={undefined}/>
       </div>
       <div className="flex items-center justify-center md:w-1/3">
